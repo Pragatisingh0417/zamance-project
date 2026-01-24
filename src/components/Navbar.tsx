@@ -3,7 +3,6 @@ import { useState } from "react";
 import logo from "../assets/logo.jpeg";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (

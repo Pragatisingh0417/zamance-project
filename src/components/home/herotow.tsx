@@ -43,8 +43,9 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, textIndex]);
 
-  return (
-    <section className="bg-gradient-to-br from-[#1E3A8A] to-[#1FA45B] text-white overflow-hidden">
+  return ( 
+    // bg-gradient-to-br from-[#1E3A8A] to-[#1FA45B]
+    <section className="bg- white text-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 py-28">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -52,13 +53,13 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl"
         >
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-3xl md:text-5xl text-[#1E3A8A] font-bold leading-tight mb-6">
             Zamance – Global Consulting & Intelligent Solutions
           </h1>
 
-          <p className="text-2xl md:text-xl text-white/90 mb-10">
+          <p className="text-2xl md:text-xl text-black/90 mb-10">
             Consulting and solutions firm specializing in{" "}
-            <span className="font-semibold  text-white">
+            <span className="font-semibold   text-[#048D59]">
               {displayText}
               <span className="animate-pulse">|</span>
             </span>
@@ -72,14 +73,14 @@ export default function Hero() {
           >
             <a
               href="/contact"
-              className="rounded-full bg-white px-8 py-3 text-[#1E3A8A] font-semibold hover:bg-white/90 transition"
+              className="rounded-full text-white px-8 py-3 bg-[#1E3A8A] font-semibold hover:bg-[#1E3A8A]/90 transition"
             >
               Talk to Experts
             </a>
 
             <a
               href="/services"
-              className="rounded-full border border-white px-8 py-3 font-semibold hover:bg-white hover:text-[#1E3A8A] transition"
+              className="rounded-full border border-[#1E3A8A] text-[#1E3A8A]  px-8 py-3 font-semibold hover:bg-[#1E3A8A] hover:text-white hover:text-[#1E3A8A] transition"
             >
               Explore Services
             </a>

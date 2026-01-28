@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 const reasons = [
   {
@@ -21,20 +22,25 @@ const reasons = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.12 },
+    transition: {
+      staggerChildren: 0.12,
+    },
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 32 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
   },
 };
 
@@ -46,8 +52,7 @@ export default function WhyZamance() {
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="max-w-3xl mb-16"
         >
@@ -71,11 +76,10 @@ export default function WhyZamance() {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate="visible"
           className="grid gap-8 md:grid-cols-2 lg:grid-cols-4"
         >
-          {reasons.map((item, index) => (
+          {reasons.map((item) => (
             <motion.div
               key={item.title}
               variants={cardVariants}

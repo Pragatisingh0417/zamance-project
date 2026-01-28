@@ -16,32 +16,33 @@ export default function Hero() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [displayText, setDisplayText] = useState("");
 
-  useEffect(() => {
-    const currentText = texts[textIndex];
+ useEffect(() => {
+  const currentText = texts[textIndex];
 
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        // Typing
-        setDisplayText(currentText.slice(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
+  const speed = isDeleting ? 50 : 80;
 
-        if (charIndex + 1 === currentText.length) {
-          setTimeout(() => setIsDeleting(true), 1200);
-        }
-      } else {
-        // Deleting
-        setDisplayText(currentText.slice(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
+  const timeout = setTimeout(() => {
+    if (!isDeleting) {
+      setDisplayText(currentText.slice(0, charIndex + 1));
+      setCharIndex((prev) => prev + 1);
 
-        if (charIndex === 0) {
-          setIsDeleting(false);
-          setTextIndex((prev) => (prev + 1) % texts.length);
-        }
+      if (charIndex + 1 === currentText.length) {
+        setTimeout(() => setIsDeleting(true), 1200);
       }
-    }, isDeleting ? 50 : 80);
+    } else {
+      setDisplayText(currentText.slice(0, charIndex - 1));
+      setCharIndex((prev) => prev - 1);
 
-    return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, textIndex]);
+      if (charIndex === 0) {
+        setIsDeleting(false);
+        setTextIndex((prev) => (prev + 1) % texts.length);
+      }
+    }
+  }, speed);
+
+  return () => clearTimeout(timeout);
+}, [charIndex, isDeleting, textIndex]);
+
 
   return (
     <section className="bg-gradient-to-br from-[#1E3A8A] to-[#1FA45B] text-white overflow-hidden">

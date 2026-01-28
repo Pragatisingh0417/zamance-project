@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import type { Variants } from "framer-motion";
 
 const reasons = [
   {
@@ -26,7 +25,7 @@ const containerVariants = {
     opacity: 1,
     transition: { staggerChildren: 0.12 },
   },
-} satisfies Variants;
+};
 
 const cardVariants = {
   hidden: { opacity: 0, y: 32 },
@@ -35,10 +34,10 @@ const cardVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
-} satisfies Variants;
+};
 
 export default function WhyZamance() {
   return (

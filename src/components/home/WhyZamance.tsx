@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
@@ -22,17 +20,15 @@ const reasons = [
   },
 ];
 
-const containerVariants: Variants = {
+const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.12,
-    },
+    transition: { staggerChildren: 0.12 },
   },
-};
+} satisfies Variants;
 
-const cardVariants: Variants = {
+const cardVariants = {
   hidden: { opacity: 0, y: 32 },
   visible: {
     opacity: 1,
@@ -42,14 +38,13 @@ const cardVariants: Variants = {
       ease: "easeOut",
     },
   },
-};
+} satisfies Variants;
 
 export default function WhyZamance() {
   return (
     <section className="py-24 bg-gradient-to-b from-white to-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,7 +67,6 @@ export default function WhyZamance() {
           </p>
         </motion.div>
 
-        {/* Cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -86,7 +80,6 @@ export default function WhyZamance() {
               whileHover={{ y: -6 }}
               className="group relative rounded-2xl border border-black/5 bg-white p-7 shadow-sm hover:shadow-xl transition-all duration-300"
             >
-              {/* Accent bar */}
               <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-[#1E3A8A] to-[#1FA45B] opacity-0 group-hover:opacity-100 transition" />
 
               <h3 className="text-lg font-semibold text-[#1E3A8A] mb-4 leading-snug">

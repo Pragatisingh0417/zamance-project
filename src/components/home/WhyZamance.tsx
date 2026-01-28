@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants, type Easing } from "framer-motion";
 
 const reasons = [
   {
@@ -19,7 +19,10 @@ const reasons = [
   },
 ];
 
-const containerVariants = {
+// Type-safe easing
+const easeOutExpo: Easing = [0.16, 1, 0.3, 1];
+
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -27,14 +30,14 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 32 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.16, 1, 0.3, 1], // ✅ cubic-bezier (TYPE SAFE)
+      ease: easeOutExpo,
     },
   },
 };
@@ -47,7 +50,7 @@ export default function WhyZamance() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, ease: easeOutExpo }}
           className="max-w-3xl mb-16"
         >
           <span className="inline-block mb-3 text-sm font-semibold tracking-wide text-[#1E3A8A]">

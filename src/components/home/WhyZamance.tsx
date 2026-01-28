@@ -1,4 +1,4 @@
-import { motion, type Variants, type Easing } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const reasons = [
   {
@@ -19,38 +19,24 @@ const reasons = [
   },
 ];
 
-// Type-safe easing
-const easeOutExpo: Easing = [0.16, 1, 0.3, 1];
-
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.12 },
-  },
+  visible: { opacity: 1 },
 };
 
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 32 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: easeOutExpo,
-    },
-  },
+  visible: { opacity: 1, y: 0 },
 };
 
 export default function WhyZamance() {
   return (
     <section className="py-24 bg-gradient-to-b from-white to-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-6">
-
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: easeOutExpo }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} // ✅ type-safe here
           className="max-w-3xl mb-16"
         >
           <span className="inline-block mb-3 text-sm font-semibold tracking-wide text-[#1E3A8A]">
@@ -79,7 +65,10 @@ export default function WhyZamance() {
             <motion.div
               key={item.title}
               variants={cardVariants}
+              initial="hidden"
+              animate="visible"
               whileHover={{ y: -6 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} // ✅ move transition here
               className="group relative rounded-2xl border border-black/5 bg-white p-7 shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-[#1E3A8A] to-[#1FA45B] opacity-0 group-hover:opacity-100 transition" />
@@ -88,13 +77,10 @@ export default function WhyZamance() {
                 {item.title}
               </h3>
 
-              <p className="text-black/70 text-sm leading-relaxed">
-                {item.desc}
-              </p>
+              <p className="text-black/70 text-sm leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

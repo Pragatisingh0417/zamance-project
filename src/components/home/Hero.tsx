@@ -16,38 +16,39 @@ export default function Hero() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [displayText, setDisplayText] = useState("");
 
-  useEffect(() => {
-    const currentText = texts[textIndex];
+ useEffect(() => {
+  const currentText = texts[textIndex];
 
-    const typingSpeed = 120;
-    const deletingSpeed = 60;
-    const pauseAtEnd = 1500;
+  const typingSpeed = 120;
+  const deletingSpeed = 60;
+  const pauseAtEnd = 1500;
 
-    let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
 
-    if (!isDeleting) {
-      if (charIndex < currentText.length) {
-        timeout = setTimeout(() => {
-          setDisplayText(currentText.slice(0, charIndex + 1));
-          setCharIndex(charIndex + 1);
-        }, typingSpeed);
-      } else {
-        timeout = setTimeout(() => setIsDeleting(true), pauseAtEnd);
-      }
+  if (!isDeleting) {
+    if (charIndex < currentText.length) {
+      timeout = setTimeout(() => {
+        setDisplayText(currentText.slice(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      }, typingSpeed);
     } else {
-      if (charIndex > 0) {
-        timeout = setTimeout(() => {
-          setDisplayText(currentText.slice(0, charIndex - 1));
-          setCharIndex(charIndex - 1);
-        }, deletingSpeed);
-      } else {
-        setIsDeleting(false);
-        setTextIndex((prev) => (prev + 1) % texts.length);
-      }
+      timeout = setTimeout(() => setIsDeleting(true), pauseAtEnd);
     }
+  } else {
+    if (charIndex > 0) {
+      timeout = setTimeout(() => {
+        setDisplayText(currentText.slice(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+      }, deletingSpeed);
+    } else {
+      setIsDeleting(false);
+      setTextIndex((prev) => (prev + 1) % texts.length);
+    }
+  }
 
-    return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, textIndex]);
+  return () => clearTimeout(timeout);
+}, [charIndex, isDeleting, textIndex]);
+
 
   return (
     <section className="bg-gradient-to-br from-[#1E3A8A] to-[#1FA45B] text-white overflow-hidden">

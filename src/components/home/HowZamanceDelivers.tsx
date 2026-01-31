@@ -1,21 +1,21 @@
 import deliveryImg from "../../assets/delivery.jpg"; // add a clean consulting image
 
 const principles = [
-  {
-    title: "Problem-First Approach",
-    desc: "We begin with business challenges, constraints, and outcomes — not tools or technologies.",
+   {
+    title: "Understand the Problem",
+    desc: "We analyze business challenges, constraints, and success criteria.",
   },
   {
-    title: "Execution Ownership",
-    desc: "We stay accountable beyond strategy through execution, adoption, and delivery quality.",
+    title: "Design the Solution",
+    desc: "We develop practical, scalable solutions aligned with strategy and outcomes.",
   },
   {
-    title: "Global Delivery with Governance",
-    desc: "European-aligned governance, compliance, and quality standards across all engagements.",
+    title: "Execute with Ownership",
+    desc: "We take full responsibility for delivery quality, timelines, and results.",
   },
   {
-    title: "Outcome-Driven Partnerships",
-    desc: "Long-term client relationships built on trust, transparency, and measurable results.",
+    title: "Govern & Deliver Results",
+    desc: "We ensure compliance, transparency, and performance improvement.",
   },
 ];
 
@@ -25,7 +25,7 @@ export default function HowZamanceDelivers() {
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="max-w-3xl mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-14 leading-snug md:leading-tight">
             How Zamance Delivers
           </h2>
           <p className="text-lg text-black/70">
@@ -35,7 +35,7 @@ export default function HowZamanceDelivers() {
           </p>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-2 items-center">
+        <div className="grid gap-10 lg:grid-cols-2 items-center">
 
           {/* Visual */}
           <div className="rounded-xl overflow-hidden border border-black/10">
@@ -47,16 +47,16 @@ export default function HowZamanceDelivers() {
           </div>
 
           {/* Principles */}
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2">
             {principles.map((item) => (
               <div
                 key={item.title}
                 className="rounded-xl bg-white border border-black/10 p-6 hover:shadow-lg transition"
               >
-                <h3 className="text-lg font-semibold text-[#1E3A8A] mb-2">
+                <h3 className="text-lg font-semibold text-[#1E3A8A] mb-4 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-black/70 text-sm">
+                <p className="text-black/70 text-sm sm:text-base md:text-sm lg:text-base leading-relaxed md:leading-snug">
                   {item.desc}
                 </p>
               </div>
@@ -64,10 +64,10 @@ export default function HowZamanceDelivers() {
           </div>
         </div>
 
-        <p className="mt-10 text-sm text-black/60 max-w-3xl">
+        {/* <p className="mt-10 text-sm text-black/60 max-w-3xl">
           Talent and delivery teams enable execution — expertise, solutions,
           and outcomes define Zamance’s value.
-        </p>
+        </p> */}
 
       </div>
     </section>

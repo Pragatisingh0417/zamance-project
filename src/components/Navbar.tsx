@@ -3,20 +3,20 @@ import { useState } from "react";
 import logo from "../assets/logo.jpeg";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-black/10">
-      <nav className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-50 bg-white shadow-md">
+      <nav className="mx-auto max-w-7xl flex items-center justify-between px-4 sm:px-6 py-3 md:py-4">
 
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
-          <img src={logo} alt="Zamance Logo" className="h-10 w-auto" />
+          <img src={logo} alt="Zamance Logo" className="w-36 sm:w-44 md:w-44 lg:w-56" />
         </NavLink>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8 text-[16px] font-medium">
-
+        {/* Desktop Menu (only for large screens lg and above) */}
+        <ul className="hidden lg:flex items-center text-black gap-6 xl:gap-10 text-sm md:text-base font-bold">
           <NavLink to="/" className="hover:text-[#1FA45B]">Home</NavLink>
           <NavLink to="/about" className="hover:text-[#1FA45B]">About Us</NavLink>
 
@@ -29,9 +29,8 @@ export default function Navbar() {
             <button className="flex items-center gap-1 hover:text-[#1FA45B]">
               Services ▾
             </button>
-
             {servicesOpen && (
-              <div className="absolute top-8 left-0 w-64 rounded-lg border border-black/10 bg-white shadow-lg">
+              <div className="absolute top-8 left-0 w-56 rounded-lg border border-black/10 bg-white shadow-lg">
                 {[
                   ["Data & Intelligence", "/services/data"],
                   ["Technology Consulting", "/services/technology"],
@@ -41,7 +40,7 @@ export default function Navbar() {
                   <NavLink
                     key={path}
                     to={path}
-                    className="block px-5 py-3 text-sm hover:bg-[#1FA45B]/10 hover:text-[#1E3A8A]"
+                    className="block px-4 py-2 text-sm hover:bg-[#1FA45B]/10 hover:text-[#1E3A8A]"
                   >
                     {label}
                   </NavLink>
@@ -52,16 +51,94 @@ export default function Navbar() {
 
           <NavLink to="/blog" className="hover:text-[#1FA45B]">Blog</NavLink>
           <NavLink to="/contact" className="hover:text-[#1FA45B]">Contact</NavLink>
+          <NavLink to="/" className="hover:text-[#1FA45B]">Admin</NavLink>
+
+          <NavLink
+            to="/contact"
+            className="ml-4 rounded-full bg-[#1E3A8A] px-6 py-2 text-white font-semibold hover:bg-[#1FA45B]"
+          >
+            Get Started
+          </NavLink>
         </ul>
 
-        {/* CTA */}
-        <NavLink
-          to="/contact"
-          className="hidden md:inline-block rounded-full bg-[#1E3A8A] px-6 py-2 text-white font-semibold hover:bg-[#1FA45B]"
+        {/* Mobile & Tablet Hamburger */}
+        <button
+          className="lg:hidden flex items-center justify-center p-2 rounded-md text-gray-800 hover:bg-gray-100"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
-          Get Started
-        </NavLink>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            {menuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
       </nav>
+
+      {/* Mobile & Tablet Menu */}
+      {menuOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
+          <ul className="flex flex-col gap-1 p-4 text-black font-semibold text-base">
+            <NavLink to="/" className="block py-2 px-2 hover:bg-[#1FA45B]/10">Home</NavLink>
+            <NavLink to="/about" className="block py-2 px-2 hover:bg-[#1FA45B]/10">About Us</NavLink>
+
+            {/* Services Collapsible */}
+            <li className="block">
+              <button
+                className="w-full flex justify-between items-center py-2 px-2 hover:bg-[#1FA45B]/10"
+                onClick={() => setServicesOpen(!servicesOpen)}
+              >
+                Services ▾
+              </button>
+              {servicesOpen && (
+                <ul className="pl-4 flex flex-col gap-1">
+                  {[
+                    ["Data & Intelligence", "/services/data"],
+                    ["Technology Consulting", "/services/technology"],
+                    ["AI Automations", "/services/ai-automations"],
+                    ["Engineering Consulting", "/services/engineering"],
+                  ].map(([label, path]) => (
+                    <NavLink
+                      key={path}
+                      to={path}
+                      className="block py-2 px-2 hover:bg-[#1FA45B]/10"
+                    >
+                      {label}
+                    </NavLink>
+                  ))}
+                </ul>
+              )}
+            </li>
+
+            <NavLink to="/blog" className="block py-2 px-2 hover:bg-[#1FA45B]/10">Blog</NavLink>
+            <NavLink to="/contact" className="block py-2 px-2 hover:bg-[#1FA45B]/10">Contact</NavLink>
+            <NavLink to="/" className="block py-2 px-2 hover:bg-[#1FA45B]/10">Admin</NavLink>
+
+            <NavLink
+              to="/contact"
+              className="mt-2 block rounded-full bg-[#1E3A8A] px-4 py-2 text-white text-center font-semibold hover:bg-[#1FA45B]"
+            >
+              Get Started
+            </NavLink>
+          </ul>
+        </div>
+      )}
     </header>
   );
 }

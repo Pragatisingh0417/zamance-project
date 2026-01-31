@@ -30,7 +30,7 @@ export default function Pillars() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-3xl font-bold mb-12 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-14 leading-snug md:leading-tight">
           Our Consulting Pillars
         </h2>
 
@@ -47,11 +47,11 @@ export default function Pillars() {
                 hover:border-black/20
               `}
             >
-              <h3 className="text-xl font-semibold text-[#1E3A8A] mb-3 group-hover:text-black transition">
+              <h3 className="text-lg font-semibold text-[#1E3A8A] mb-4 leading-snug">
                 {p.title}
               </h3>
 
-              <p className="text-black/70 text-sm leading-relaxed">
+              <p className="text-black/70 text-sm sm:text-base md:text-sm lg:text-base leading-relaxed md:leading-snug">
                 {p.desc}
               </p>
             </div>

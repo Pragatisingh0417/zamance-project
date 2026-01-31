@@ -7,7 +7,7 @@ const texts = [
   "Data Analysis",
   "Digital Technology",
   "AI Automations",
-  "Engineering Consultancy",
+  "Engineering",
 ];
 
 export default function Hero() {
@@ -16,50 +16,59 @@ export default function Hero() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [displayText, setDisplayText] = useState("");
 
- useEffect(() => {
-  const currentText = texts[textIndex];
+  useEffect(() => {
+    const currentText = texts[textIndex];
 
-  const speed = isDeleting ? 50 : 80;
+    const typingSpeed = 120;
+    const deletingSpeed = 60;
+    const pauseAtEnd = 1500;
 
-  const timeout = setTimeout(() => {
+    let timeout: NodeJS.Timeout;
+
     if (!isDeleting) {
-      setDisplayText(currentText.slice(0, charIndex + 1));
-      setCharIndex((prev) => prev + 1);
-
-      if (charIndex + 1 === currentText.length) {
-        setTimeout(() => setIsDeleting(true), 1200);
+      if (charIndex < currentText.length) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentText.slice(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        }, typingSpeed);
+      } else {
+        timeout = setTimeout(() => setIsDeleting(true), pauseAtEnd);
       }
     } else {
-      setDisplayText(currentText.slice(0, charIndex - 1));
-      setCharIndex((prev) => prev - 1);
-
-      if (charIndex === 0) {
+      if (charIndex > 0) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentText.slice(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        }, deletingSpeed);
+      } else {
         setIsDeleting(false);
         setTextIndex((prev) => (prev + 1) % texts.length);
       }
     }
-  }, speed);
 
-  return () => clearTimeout(timeout);
-}, [charIndex, isDeleting, textIndex]);
-
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, textIndex]);
 
   return (
     <section className="bg-gradient-to-br from-[#1E3A8A] to-[#1FA45B] text-white overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 py-28">
+      <div className="mx-auto min-h-[500px] md:min-h-[550px] lg:min-h-[600px] max-w-7xl px-6 py-20 sm:py-28 flex flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl"
         >
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Zamance – Global Consulting & Intelligent Solutions
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
+            Zamance Consulting-Led Solutions. Execution You Can Trust.
           </h1>
 
-          <p className="text-2xl md:text-xl text-white/90 mb-10">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8">
+            We help organizations turn complex data, technology, and engineering challenges into measurable business outcomes—delivered with European governance standards.
+          </p>
+
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-10">
             Consulting and solutions firm specializing in{" "}
-            <span className="font-semibold  text-white">
+            <span className="font-semibold text-white">
               {displayText}
               <span className="animate-pulse">|</span>
             </span>
@@ -69,18 +78,18 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap gap-3 sm:gap-4"
           >
             <a
               href="/contact"
-              className="rounded-full bg-white px-8 py-3 text-[#1E3A8A] font-semibold hover:bg-white/90 transition"
+              className="rounded-full bg-white px-6 sm:px-8 py-2 sm:py-3 text-[#1E3A8A] hover:text-white hover:bg-[#1E3A8A] font-semibold transition text-sm sm:text-base"
             >
               Talk to Experts
             </a>
 
             <a
               href="/services"
-              className="rounded-full border border-white px-8 py-3 font-semibold hover:bg-white hover:text-[#1E3A8A] transition"
+              className="rounded-full border border-white px-6 sm:px-8 py-2 sm:py-3 font-semibold hover:bg-white hover:text-[#1E3A8A] transition text-sm sm:text-base"
             >
               Explore Services
             </a>

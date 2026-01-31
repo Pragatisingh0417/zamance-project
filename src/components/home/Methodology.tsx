@@ -25,9 +25,9 @@ export default function Methodology() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-14 text-center">
-          The Zamance Methodology
-        </h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-14 leading-snug md:leading-tight">
+  The Zamance Methodology
+</h2>
 
         <div className="grid gap-10 md:grid-cols-4">
           {steps.map((s) => (
@@ -36,7 +36,7 @@ export default function Methodology() {
                 {s.step}
               </div>
               <h3 className="text-lg font-semibold mb-2">{s.title}</h3>
-              <p className="text-black/70">{s.desc}</p>
+              <p className="text-black/70 text-sm sm:text-base md:text-sm lg:text-base leading-relaxed md:leading-snug">{s.desc}</p>
             </div>
           ))}
         </div>

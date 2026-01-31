@@ -1,4 +1,6 @@
-import { motion } from "framer-motion";
+"use client";
+
+import { motion, type Variants } from "framer-motion";
 
 const trustItems = [
   {
@@ -67,50 +69,61 @@ const trustItems = [
   },
 ];
 
-export default function TrustStrip() {
-  // Animation variants
-  const container = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
+// ✅ Typed Framer Motion variants
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
     },
-  };
+  },
+};
 
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
+const itemVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
+export default function TrustStrip() {
   return (
     <section className="mt-2">
       <div className="max-w-7xl mx-auto px-6 py-10">
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-14 leading-snug md:leading-tight">
           Our Commitment to Quality & Governance
         </p>
+
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          variants={container}
+          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {trustItems.map((itemData, index) => (
+          {trustItems.map((item, index) => (
             <motion.div
               key={index}
               className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition"
-              variants={item}
+              variants={itemVariants}
             >
               <div className="text-teal-600 w-14 h-14">
-                {itemData.icon}
+                {item.icon}
               </div>
               <div>
                 <h4 className="font-extralight text-lg text-slate-900">
-                  {itemData.title}
+                  {item.title}
                 </h4>
                 <p className="text-sm text-slate-600 mt-1">
-                  {itemData.desc}
+                  {item.desc}
                 </p>
               </div>
             </motion.div>

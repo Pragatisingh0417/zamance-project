@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 
+type Testimonial = {
+  name: string;
+  company: string;
+  message: string;
+};
+
 export default function Testimonials() {
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
       name: "Amit Sharma",
       company: "ABC School",
@@ -30,7 +36,7 @@ export default function Testimonials() {
     }, 4000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [testimonials.length]);
 
   return (
     <section className="py-20">
@@ -39,7 +45,7 @@ export default function Testimonials() {
           What Our Clients Say
         </h2>
 
-        {/* 🔹 Mobile Auto Slider */}
+        {/* Mobile Auto Slider */}
         <div className="block md:hidden overflow-hidden">
           <div
             className="flex transition-transform duration-700 ease-in-out"
@@ -53,7 +59,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* 🔹 Desktop Grid */}
+        {/* Desktop Grid */}
         <div className="hidden md:grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((item, i) => (
             <TestimonialCard key={i} item={item} />
@@ -64,17 +70,9 @@ export default function Testimonials() {
   );
 }
 
-function TestimonialCard({ item }) {
+function TestimonialCard({ item }: { item: Testimonial }) {
   return (
     <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-      <svg
-        className="w-8 h-8 text-teal-500 mb-4"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M7.17 6C4.59 6 2.5 8.09 2.5 10.67c0 1.71 1.39 3.1 3.1 3.1.6 0 1.16-.2 1.61-.54l.36.71c-.61.47-1.38.74-2.23.74-2.48 0-4.5-2.02-4.5-4.5S4.69 6 7.17 6zm12 0c-2.58 0-4.67 2.09-4.67 4.67 0 1.71 1.39 3.1 3.1 3.1.6 0  1.16-.2 1.61-.54l.36.71c-.61.47-1.38.74-2.23.74-2.48 0-4.5-2.02-4.5-4.5S16.69 6 19.17 6z" />
-      </svg>
-
       <p className="text-gray-700 mb-6 text-lg leading-relaxed">
         “{item.message}”
       </p>

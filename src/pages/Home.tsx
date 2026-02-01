@@ -6,20 +6,29 @@ import Methodology from "../components/home/Methodology";
 import Pillars from "../components/home/Pillars";
 import WhyZamance from "../components/home/WhyZamance";
 import Trust from "../components/home/Trust";
+import Partners from "../components/home/Partners";
+import Testimonials from "../components/home/Testimonials";
+import CaseStudies from "../components/home/CaseStudies";
+
+
+
+
 
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Trust />
-      <WhyZamance />
-      <HowZamanceDelivers />
-      {/* Next sections go here */}
-      <Pillars />
-      <Industries />
-      <Methodology />
-      {/* <NewsletterCTA /> */}
+       <Hero />                 
+      <Trust />                
+      <WhyZamance />           
+      <Pillars />              
+      <HowZamanceDelivers />   
+      <Methodology />          
+      <Industries />           
+      <CaseStudies />          
+      <Testimonials />         
+      <Partners />             
+      {/* <NewsletterCTA /> */} 
 
       
     </>

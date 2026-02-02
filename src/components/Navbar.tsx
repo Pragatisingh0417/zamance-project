@@ -16,7 +16,7 @@ export default function Navbar() {
         </NavLink>
 
         {/* Desktop Menu (only for large screens lg and above) */}
-        <ul className="hidden lg:flex items-center text-black gap-6 xl:gap-10 text-sm md:text-base font-bold">
+        <ul className="hidden lg:flex items-center text-black gap-6 xl:gap-10 text-sm md:text-base font-medium">
           <NavLink to="/" className="hover:text-[#1FA45B]">Home</NavLink>
           <NavLink to="/about" className="hover:text-[#1FA45B]">About Us</NavLink>
 
@@ -51,7 +51,24 @@ export default function Navbar() {
 
           <NavLink to="/blog" className="hover:text-[#1FA45B]">Blog</NavLink>
           <NavLink to="/contact" className="hover:text-[#1FA45B]">Contact</NavLink>
-          <NavLink to="/" className="hover:text-[#1FA45B]">Admin</NavLink>
+          <NavLink
+  to="/"
+  className="flex items-center gap-2 py-2 px-2 rounded-md bg-[#1FA45B]/10 transition"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="w-5 h-5 text-[#1FA45B]"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+  >
+    <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" />
+    <path d="M4 20a8 8 0 0116 0" />
+  </svg>
+
+  <span>Admin</span>
+</NavLink>
 
           <NavLink
             to="/contact"
@@ -128,7 +145,24 @@ export default function Navbar() {
 
             <NavLink to="/blog" className="block py-2 px-2 hover:bg-[#1FA45B]/10">Blog</NavLink>
             <NavLink to="/contact" className="block py-2 px-2 hover:bg-[#1FA45B]/10">Contact</NavLink>
-            <NavLink to="/" className="block py-2 px-2 hover:bg-[#1FA45B]/10">Admin</NavLink>
+            <NavLink
+  to="/"
+  className="flex items-center gap-2 py-2 px-2 rounded-md hover:bg-[#1FA45B]/10 transition"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="w-5 h-5 text-[#1FA45B]"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+  >
+    <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" />
+    <path d="M4 20a8 8 0 0116 0" />
+  </svg>
+
+  <span>Admin</span>
+</NavLink>
 
             <NavLink
               to="/contact"

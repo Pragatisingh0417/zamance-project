@@ -64,9 +64,9 @@ export default function Hero() {
 Turning Vision into Action
           </h1>
 
-          <p className="text-base sm:text-lg md:text-lg text-white/90 mb-6 sm:mb-8">
+          {/* <p className="text-base sm:text-lg md:text-lg text-white/90 mb-6 sm:mb-8">
             We turn strategic vision into execution using data, technology, and engineering expertise that drives real business results.
-          </p>
+          </p> */}
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-10">
             Consulting and solutions firm specializing in{" "}

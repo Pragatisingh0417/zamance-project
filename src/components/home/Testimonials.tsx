@@ -18,7 +18,7 @@ export default function Testimonials() {
       name: "Rohit Verma",
       company: "TechNova Solutions",
       message:
-        "Their strategy and guidance helped us launch our SaaS product successfully on time.",
+        "Zamance Consultancy strategy and guidance helped us launch our SaaS product successfully on time.",
     },
     {
       name: "Priya Nair",
@@ -42,7 +42,7 @@ export default function Testimonials() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 mb-14 leading-snug text-center md:leading-tight">
-          What Our Clients Say
+         Our Testimonials
         </h2>
 
         {/* Mobile Auto Slider */}

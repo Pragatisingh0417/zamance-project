@@ -1,3 +1,6 @@
+import industriesBg from "../../assets/bg/industries.jpg";
+
+
 const industries = [
   {
     name: "Finance & Banking",
@@ -47,7 +50,7 @@ export default function Industries() {
   return (
     <section
       className="relative py-24 bg-cover bg-center bg-fixed "
-      style={{ backgroundImage: "url('/src/assets/bg/industries.jpg')" }}
+       style={{ backgroundImage: `url(${industriesBg})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm" />

@@ -98,7 +98,7 @@ export default function TrustStrip() {
   return (
     <section className="mt-2">
       <div className="max-w-7xl mx-auto px-6 py-10">
-        <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-14 leading-snug md:leading-tight">
+        <p className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 mb-14 leading-snug text-center md:leading-tight">
           Our Commitment to Quality & Governance
         </p>
 

@@ -15,7 +15,7 @@ export default function Partners() {
     <section className="py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-14 leading-snug md:leading-tight">
+        <h2 className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 mb-14 leading-snug text-center md:leading-tight">
           Trusted by Leading Organizations
         </h2>
 

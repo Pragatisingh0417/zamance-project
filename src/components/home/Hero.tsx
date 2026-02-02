@@ -52,19 +52,20 @@ export default function Hero() {
 
   return (
     <section className="bg-gradient-to-br from-[#1E3A8A] to-[#1FA45B] text-white overflow-hidden">
-      <div className="mx-auto min-h-[500px] md:min-h-[550px] lg:min-h-[600px] max-w-7xl px-6 py-20 sm:py-28 flex flex-col justify-center">
+      <div className="mx-auto min-h-[450px] md:min-h-[520px] lg:min-h-[575px] max-w-7xl px-6 py-16 sm:py-28 flex flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-            Zamance Consulting-Led Solutions. Execution You Can Trust.
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight mb-4 sm:mb-6">
+           Zamance Consulting
+Turning Vision into Action
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8">
-            We help organizations turn complex data, technology, and engineering challenges into measurable business outcomes—delivered with European governance standards.
+          <p className="text-base sm:text-lg md:text-lg text-white/90 mb-6 sm:mb-8">
+            We turn strategic vision into execution using data, technology, and engineering expertise that drives real business results.
           </p>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-10">

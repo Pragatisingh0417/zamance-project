@@ -12,7 +12,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
-          <img src={logo} alt="Zamance Logo" className="w-36 sm:w-44 md:w-44 lg:w-56" />
+          <img src={logo} alt="Zamance Logo" className="w-30 sm:w-40 md:w-40 lg:w-48" />
         </NavLink>
 
         {/* Desktop Menu (only for large screens lg and above) */}

@@ -41,7 +41,7 @@ export default function Testimonials() {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-14">
+        <h2 className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 mb-14 leading-snug text-center md:leading-tight">
           What Our Clients Say
         </h2>
 

@@ -3,7 +3,7 @@ export default function NewsletterCTA() {
     <section className="py-20 bg-[#1E3A8A] text-white">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">
-          Insights. Strategy. Execution.
+          Solving Complex Data and Technology Challenges with Measurable Impact
         </h2>
         <p className="text-white/90 mb-8">
           Subscribe to Zamance insights on data, technology, AI, and engineering.

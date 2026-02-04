@@ -60,8 +60,7 @@ export default function Hero() {
           className="max-w-3xl"
         >
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight mb-4 sm:mb-6">
-           Zamance Consulting
-Turning Vision into Action
+           Zamance Global Consulting & Intelligent Solutions
           </h1>
 
           {/* <p className="text-base sm:text-lg md:text-lg text-white/90 mb-6 sm:mb-8">

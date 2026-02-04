@@ -5,7 +5,7 @@ const industries = [
   {
     name: "Finance & Banking",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24"><path fill="#fff" d="M8.692 12.266V6.692h1.616v5.574l-.808-.824zm4.347 2.23V2.692h1.615v10.189zM4.307 16.64v-5.947h1.615v4.331zm-.116 3.911l5.297-5.296l3.55 3.05l6.753-6.754H17.5v-1h4v4h-1v-2.292l-7.438 7.438l-3.55-3.05l-3.904 3.904z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="#fff" d="M8.692 12.266V6.692h1.616v5.574l-.808-.824zm4.347 2.23V2.692h1.615v10.189zM4.307 16.64v-5.947h1.615v4.331zm-.116 3.911l5.297-5.296l3.55 3.05l6.753-6.754H17.5v-1h4v4h-1v-2.292l-7.438 7.438l-3.55-3.05l-3.904 3.904z"/></svg>
     ),
   },
   {
@@ -35,13 +35,19 @@ const industries = [
   {
     name: "Travel, Tourism & Leisure",
     icon: (
-     <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24"><path fill="#fff" d="M11.564 10.38L5.16 7.662q-.408-.159-.478-.58t.231-.721l.246-.266q.143-.142.325-.194t.385-.021l8.712 1.504l3.138-3.145q.421-.42 1.018-.42t1.019.42q.421.421.421 1.019t-.421 1.018L16.617 9.42l1.499 8.706q.03.204-.019.389q-.049.184-.191.327l-.265.24q-.302.302-.725.235q-.424-.068-.583-.475l-2.714-6.424l-3.069 3.064l.53 3.119q.032.154-.005.295q-.036.142-.154.259l-.271.252q-.235.235-.536.179q-.3-.056-.455-.333L7.95 16.05l-3.202-1.71q-.277-.153-.333-.454t.18-.536l.251-.271q.117-.118.259-.164q.141-.046.295-.015l3.113.544z" stroke-width="0.2" stroke="#fff"/></svg>
+     <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 14 14"><g fill="none" stroke="#fffdfd" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"><path d="M13.5 13.48H13a2 2 0 0 1-2-2a2 2 0 0 1-4 0a2 2 0 0 1-4 0a2 2 0 0 1-2 2H.5m9.5-4a5.49 5.49 0 0 0-8.48 0"/><path d="M6.5 7.53c.06-2.26.75-4.32 2.25-5.06M5.76.57a2.58 2.58 0 0 1 3 1.9"/><path d="M12.41 2.84a2.78 2.78 0 0 0-3.66-.37"/><path d="M5.08 3.54a3 3 0 0 1 3.67-1.07a2.55 2.55 0 0 1 1.89 3"/></g></svg>
     ),
   },
   {
     name: "Technology & SaaS",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24"><path fill="#fff" d="M17.300 7.501H7.5v10.003h10.003z" stroke-width="0.0" stroke="#fff"/><path fill="#fff" d="M21.505 5.5v-2h-2v-2h-2.001v2h-2v-2h-2.001v2h-2v-2H9.501v2h-2v-2H5.5v2h-2v2h-2v2.001h2v2h-2v2.001h2v2h-2v2.001h2v2h-2v2.001h2v2h2v2.001h2.001v-2h2v2h2.001v-2h2v2h2.001v-2h2v2h2.001v-2h2v-2h2.001v-2.001h-2v-2h2v-2.001h-2v-2h2V9.501h-2v-2h2V5.5zm-2 14.004H5.5V5.501h14.003z" stroke-width="0.1" stroke="#fff"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 48 48"><g fill="none" stroke="#fffdfd" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M32 44.5v-5.163l4.668.787a3 3 0 0 0 3.488-2.706l.574-6.812c1.85-.415 3.18-1.084 4.043-1.642c.774-.5.864-1.51.348-2.274l-4.146-6.137C40.483 11.328 32.847 4 23.5 4v40.5"/><path d="M3 24a3 3 0 1 0 6 0a3 3 0 1 0-6 0M8 9a3 3 0 1 0 6 0a3 3 0 1 0-6 0M7 40a3 3 0 1 0 6 0a3 3 0 1 0-6 0"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 24h14.5m0-8H18l-4.5-4.5m10 21.5H17l-4.5 4.5"/></g></svg>
+    ),
+  },
+  {
+    name: "Engineering Consulting",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 48 48"><path fill="none" stroke="#fffdfd" stroke-linecap="round" stroke-linejoin="round" d="M41.332 16.08L5.5 16.988v-5.453l35.832.909z" stroke-width="0.5"/><path fill="none" stroke="#fffdfd" stroke-linecap="round" stroke-linejoin="round" d="M17.963 41.918h-7.79l1.559-35.836h4.673z" stroke-width="0.5"/><path fill="none" stroke="#fffdfd" stroke-linecap="round" stroke-linejoin="round" d="M41.332 16.08L5.5 16.988v-5.453l35.832.909zM10.953 34.907h6.231m-6.231-7.012h6.231m-5.842-5.453h5.453m5.842-6.232v-3.896m6.231 3.896v-3.896M35.1 24.78V12.313M27.7 24.78h14.8v3.115H27.7z" stroke-width="0.5"/></svg>
     ),
   },
 ];

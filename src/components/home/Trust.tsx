@@ -5,9 +5,9 @@ import { motion, type Variants } from "framer-motion";
 const trustItems = [
   {
     title: "GDPR Compliant",
-    desc: "EU-aligned data privacy & protection",
+    desc: "Privacy protection under EU data protection",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6">
+      <svg viewBox="0 0 24 24" className="w-12 h-12">
         <path
           d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6z"
           fill="none"
@@ -25,9 +25,9 @@ const trustItems = [
   },
   {
     title: "European Governance",
-    desc: "Compliance-driven quality standards",
+    desc: "Governance ensuring consistent quality",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6">
+      <svg viewBox="0 0 24 24" className="w-12 h-12">
         <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.5" />
         <path d="M8 12l2.5 2.5L16 9" fill="none" stroke="currentColor" strokeWidth="1.5" />
       </svg>
@@ -35,9 +35,9 @@ const trustItems = [
   },
   {
     title: "Global Delivery",
-    desc: "India & Europe with local accountability",
+    desc: "India–Europe delivery with local ownership",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6">
+      <svg viewBox="0 0 24 24" className="w-12 h-12">
         <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.5" />
         <path d="M3 12h18M12 3a15 15 0 010 18" fill="none" stroke="currentColor" strokeWidth="1.5" />
       </svg>
@@ -45,9 +45,9 @@ const trustItems = [
   },
   {
     title: "Outcome Ownership",
-    desc: "Execution with measurable results",
+    desc: "Execution focused on measurable results",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6">
+      <svg viewBox="0 0 24 24" className="w-12 h-12">
         <path d="M4 12l4 4 12-12" fill="none" stroke="currentColor" strokeWidth="1.5" />
       </svg>
     ),

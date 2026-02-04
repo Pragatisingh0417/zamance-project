@@ -51,24 +51,7 @@ export default function Navbar() {
 
           <NavLink to="/blog" className="hover:text-[#1FA45B]">Blog</NavLink>
           <NavLink to="/contact" className="hover:text-[#1FA45B]">Contact</NavLink>
-          <NavLink
-  to="/"
-  className="flex items-center gap-2 py-2 px-2 rounded-md bg-[#1FA45B]/10 transition"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className="w-5 h-5 text-[#1FA45B]"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-  >
-    <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" />
-    <path d="M4 20a8 8 0 0116 0" />
-  </svg>
 
-  <span>Admin</span>
-</NavLink>
 
           <NavLink
             to="/contact"
@@ -76,9 +59,27 @@ export default function Navbar() {
           >
             Get Started
           </NavLink>
+          <li className="relative">
+  <NavLink
+    to="/login"
+    className="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-gray-100 transition"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-5 h-5 text-[#1FA45B]"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={1.5}
+    >
+      <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" />
+      <path d="M4 20a8 8 0 0116 0" />
+    </svg>
+    <span className="hidden xl:inline">Admin</span>
+  </NavLink>
+</li>
         </ul>
 
-        {/* Mobile & Tablet Hamburger */}
         <button
           className="lg:hidden flex items-center justify-center p-2 rounded-md text-gray-800 hover:bg-gray-100"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -106,6 +107,9 @@ export default function Navbar() {
             )}
           </svg>
         </button>
+        
+        
+
       </nav>
 
       {/* Mobile & Tablet Menu */}
@@ -146,23 +150,23 @@ export default function Navbar() {
             <NavLink to="/blog" className="block py-2 px-2 hover:bg-[#1FA45B]/10">Blog</NavLink>
             <NavLink to="/contact" className="block py-2 px-2 hover:bg-[#1FA45B]/10">Contact</NavLink>
             <NavLink
-  to="/"
-  className="flex items-center gap-2 py-2 px-2 rounded-md hover:bg-[#1FA45B]/10 transition"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className="w-5 h-5 text-[#1FA45B]"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-  >
-    <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" />
-    <path d="M4 20a8 8 0 0116 0" />
-  </svg>
+              to="/"
+              className="flex items-center gap-2 py-2 px-2 rounded-md hover:bg-[#1FA45B]/10 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                className="w-5 h-5 text-[#1FA45B]"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" />
+                <path d="M4 20a8 8 0 0116 0" />
+              </svg>
 
-  <span>Admin</span>
-</NavLink>
+              <span>Admin</span>
+            </NavLink>
 
             <NavLink
               to="/contact"

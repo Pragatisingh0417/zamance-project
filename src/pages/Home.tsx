@@ -9,6 +9,7 @@ import Trust from "../components/home/Trust";
 import Partners from "../components/home/Partners";
 import Testimonials from "../components/home/Testimonials";
 import CaseStudies from "../components/home/CaseStudies";
+import GetInTouch from "../components/home/GetInTouch";
 
 
 
@@ -28,8 +29,9 @@ export default function Home() {
       <HowZamanceDelivers />   
       <Methodology />                
       <Testimonials />         
-                  
+                  <GetInTouch />
       <NewsletterCTA /> 
+      
 
       
     </>

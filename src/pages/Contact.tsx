@@ -3,7 +3,7 @@ export default function ContactUs() {
     <div className="min-h-screen bg-gray-50">
 
       {/* ===================== Banner ===================== */}
-      <section className="relative bg-[#1E3A8A] h-30 md:h-40 lg:h-60 flex items-center justify-center ">
+      <section className="relative bg-gradient-to-br from-[#1E3A8A] to-[#1FA45B] h-30 md:h-40 lg:h-60 flex items-center justify-center ">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-left">
           Contact Us
         </h1>

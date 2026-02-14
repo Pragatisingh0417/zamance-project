@@ -68,19 +68,7 @@ export default function Footer() {
               Get insights on data, AI, technology, and engineering consulting.
             </p>
 
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Email address"
-                className="w-full rounded-full px-4 py-2 text-black text-sm"
-              />
-              <button
-                type="submit"
-                className="rounded-full bg-[#1FA45B] px-5 py-2 text-sm font-semibold hover:bg-green-600"
-              >
-                →
-              </button>
-            </form>
+            
           </div>
         </div>
 

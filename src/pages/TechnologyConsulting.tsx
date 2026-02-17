@@ -1,6 +1,5 @@
 import ServiceHero from "../components/ServiceHero";
-import Section from "../components/Section";
-import CTASection from "../components/CTASection";
+
 import { TechClarity } from "../components/technologyConsulting/TechClarity";
 import { TechProblems } from "../components/technologyConsulting/TechProblems";
 import { TechCapabilities } from "../components/technologyConsulting/TechCapabilities";

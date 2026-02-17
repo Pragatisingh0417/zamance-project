@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const blogPosts = [
   {
@@ -36,14 +36,7 @@ const blogPosts = [
   },
 ];
 
-const categories = [
-  "All",
-  "Strategy & Transformation",
-  "Digital Consulting",
-  "Governance & Compliance",
-  "AI & Intelligent Systems",
-  "Case Studies",
-];
+
 
 const Blog = () => {
   return (

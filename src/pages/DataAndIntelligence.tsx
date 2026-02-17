@@ -11,7 +11,7 @@ const DataAndIntelligence = () => {
     <>
       <ServiceHero
         title="Data & Intelligence Consulting"
-        subtitle="Transforming enterprise data into actionable intelligence that enables confident, informed decision-making."
+        // subtitle="Transforming enterprise data into actionable intelligence that enables confident, informed decision-making."
       />
 <DataIntelligenceCaseStudies />
       <DataIntelligenceConsulting />

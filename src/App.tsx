@@ -11,6 +11,7 @@ import DataAndIntelligence from "./pages/DataAndIntelligence";
 import TechnologyConsulting from "./pages/TechnologyConsulting";
 import AIAutomations from "./pages/AIAutomations";
 import EngineeringConsulting from "./pages/EngineeringConsulting";
+import Login from "./pages/Login";
 
 export default function App() {
   return (
@@ -28,6 +29,9 @@ export default function App() {
         <Route path="/services/technology-consulting" element={<TechnologyConsulting />} />
         <Route path="/services/ai-automations" element={<AIAutomations />} />
         <Route path="/services/engineering-consulting" element={<EngineeringConsulting />} />
+
+                <Route path="/login" element={<Login />} />
+
       </Routes>
 
       <ScrollToTopButton />

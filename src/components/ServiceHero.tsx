@@ -1,6 +1,6 @@
 type Props = {
   title: string;
-  subtitle: string;
+  subtitle?: string; // ✅ optional
 };
 
 const ServiceHero = ({ title, subtitle }: Props) => {
@@ -10,9 +10,12 @@ const ServiceHero = ({ title, subtitle }: Props) => {
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight animate-fadeIn">
           {title}
         </h1>
-        {/* <p className="mt-6 max-w-2xl text-slate-300 text-lg animate-slideUp">
-          {subtitle}
-        </p> */}
+
+        {subtitle && (
+          <p className="mt-6 max-w-2xl text-slate-200 text-lg animate-slideUp">
+            {subtitle}
+          </p>
+        )}
       </div>
     </section>
   );

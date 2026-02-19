@@ -21,7 +21,7 @@ const standards = [
 
 export default function GovernanceStandards() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#F8FAFC] via-white to-white py-24 sm:py-28">
+    <section className="relative overflow-hidden  py-20 sm:py-18">
       
       {/* Soft background structure */}
       <div className="pointer-events-none absolute inset-0">

@@ -2,14 +2,14 @@ export function TechGovernance() {
   const governance = [
     {
       title: "Architecture Governance",
-      desc: "Structured oversight ensuring every system aligns with long-term scalability, integration standards, and enterprise resilience.",
+      desc: "Structured oversight ensuring every system aligns with long-term scalability,  and enterprise resilience.",
     },
     {
       title: "Security & Compliance",
-      desc: "Embedded regulatory controls and security frameworks aligned with data protection laws and operational risk standards.",
+      desc: "Embedded regulatory controls and security frameworks aligned with data protection standards.",
     },
     {
-      title: "Risk Management",
+      title: "Risk Governance & Exposure",
       desc: "Proactive identification of vendor, operational, and technical dependencies to prevent structural fragility.",
     },
     {

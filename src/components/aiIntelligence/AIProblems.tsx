@@ -2,7 +2,7 @@ export function AIProblems() {
   const problems = [
     {
       title: "Manual & Error-Prone Operations",
-      desc: "Repetitive workflows, fragmented approvals, and spreadsheet-driven processes increase human error and slow down execution.",
+      desc: "Repetitive workflows, fragmented approvals, and spreadsheet-driven processes increase human error and slow execution.",
     },
     {
       title: "Reactive Decision-Making",
@@ -10,7 +10,7 @@ export function AIProblems() {
     },
     {
       title: "Escalating Operational Costs",
-      desc: "Inefficient processes, duplicated efforts, and underutilized systems drive unnecessary overhead and resource waste.",
+      desc: "Inefficient processes, duplicated efforts, and underutilized systems drive unnecessary overhead and waste.",
     },
     {
       title: "Data-Rich but Insight-Poor",
@@ -19,7 +19,7 @@ export function AIProblems() {
   ];
 
   return (
-    <section className="bg-white py-28">
+    <section className="relative bg-gradient-to-b from-white to-[#F8FAFC] py-28">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Header */}
@@ -33,34 +33,38 @@ export function AIProblems() {
           </h2>
 
           <p className="mt-6 text-lg text-black/70 leading-relaxed">
-            We apply artificial intelligence to address structural inefficiencies,
-            decision bottlenecks, and hidden operational risk — transforming data
-            into measurable performance advantage.
+            We apply artificial intelligence to eliminate structural inefficiencies,
+            unlock predictive insight, and transform data into measurable advantage.
           </p>
         </div>
 
-        {/* Problem Grid */}
-        <div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        {/* Grid */}
+        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {problems.map((problem, index) => (
             <div
               key={problem.title}
-              className="group relative rounded-3xl border border-black/10 bg-[#F8FAFC] p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className="group relative overflow-hidden rounded-3xl bg-white p-10 shadow-sm border border-black/5 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
             >
-              {/* Number Badge */}
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1FA45B]/10 text-[#1FA45B] font-semibold text-sm">
-                {String(index + 1).padStart(2, "0")}
+              {/* Top Accent Bar */}
+              <div className="absolute top-0 left-0 h-1 w-full bg-[#1FA45B] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></div>
+
+              {/* Step Number */}
+              <div className="flex items-start gap-6">
+                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[#1FA45B]/10 text-[#1FA45B] font-bold text-lg">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-[#0F172A]">
+                    {problem.title}
+                  </h3>
+
+                  <p className="mt-4 text-black/70 leading-relaxed">
+                    {problem.desc}
+                  </p>
+                </div>
               </div>
 
-              <h3 className="mt-6 text-lg font-semibold text-[#0F172A]">
-                {problem.title}
-              </h3>
-
-              <p className="mt-4 text-sm text-black/70 leading-relaxed">
-                {problem.desc}
-              </p>
-
-              {/* Hover Accent Line */}
-              <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#1FA45B] transition-all duration-300 group-hover:w-full rounded-b-3xl"></div>
             </div>
           ))}
         </div>

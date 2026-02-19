@@ -1,7 +1,7 @@
 export function AIClarity() {
   const pillars = [
     {
-      title: "Decision Intelligence",
+      title: "AI-Powered Decisioning",
       desc: "AI-driven insights embedded directly into operational workflows to support faster, more accurate executive and frontline decisions.",
     },
     {
@@ -10,7 +10,7 @@ export function AIClarity() {
     },
     {
       title: "Human-Centered Design",
-      desc: "Automation designed to augment teams — preserving oversight, accountability, and institutional knowledge.",
+      desc: "Automation designed to augment teams while preserving oversight, accountability, and critical institutional knowledge.",
     },
     {
       title: "Governed & Explainable AI",
@@ -20,7 +20,7 @@ export function AIClarity() {
 
   return (
     <section className="bg-[#F8FAFC] py-28">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-7xl px-6 text-center">
 
         {/* Header */}
         <div className="max-w-3xl mx-auto">

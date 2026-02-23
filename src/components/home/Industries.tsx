@@ -1,4 +1,4 @@
-import industriesBg from "../../assets/bg/industries.jpg";
+
 
 
 const industries = [

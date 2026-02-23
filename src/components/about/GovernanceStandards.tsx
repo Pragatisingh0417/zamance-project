@@ -22,6 +22,10 @@ const standards = [
 export default function GovernanceStandards() {
   return (
     <section className="relative overflow-hidden  py-20 sm:py-18">
+
+      <div className="absolute left-28 top-20 w-[240px] h-[240px] bg-green-300 rounded-full blur-[70px] opacity-100"></div>
+
+        
       
       {/* Soft background structure */}
       <div className="pointer-events-none absolute inset-0">
@@ -31,6 +35,7 @@ export default function GovernanceStandards() {
 
       <div className="relative mx-auto max-w-7xl px-6">
         
+        <div className="absolute bottom-32 right-44 w-[240px] h-[240px] bg-blue-300 rounded-full blur-[70px] opacity-100"></div>
         {/* Heading */}
         <div className="mx-auto mb-20 max-w-3xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-[#1FA45B]">

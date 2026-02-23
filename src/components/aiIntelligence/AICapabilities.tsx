@@ -19,7 +19,8 @@ export function AICapabilities() {
   ];
 
   return (
-    <section className="bg-white py-32">
+    <section className="bg-white py-32 relative">
+      <div className="absolute top-1/2 left-96 w-[240px] h-[240px] bg-green-300 rounded-full blur-[70px] opacity-100"></div>
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Header */}

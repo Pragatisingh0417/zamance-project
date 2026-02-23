@@ -55,11 +55,11 @@ const industries = [
 export default function Industries() {
   return (
     <section
-      className="relative py-24 bg-cover bg-center bg-fixed "
-       style={{ backgroundImage: `url(${industriesBg})` }}
+      className="relative py-24 bg-cover bg-center bg-fixed bg-gradient-to-br from-blue-900 via-blue-900 to-teal-800 "
+       
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm" />
+      <div className="absolute inset-0 backdrop-blur-sm" />
 
       <div className="relative max-w-7xl mx-auto px-6 text-white">
         <h2 className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-white mb-14 leading-snug text-center md:leading-tight">

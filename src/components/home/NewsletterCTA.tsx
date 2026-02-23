@@ -38,7 +38,7 @@ export default function NewsletterCTA() {
   return (
     <section className="relative py-10 overflow-hidden bg-slate-950">
       {/* Base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-teal-800" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-900 to-blue-900" />
 
       {/* Cursor-follow glow */}
       <motion.div

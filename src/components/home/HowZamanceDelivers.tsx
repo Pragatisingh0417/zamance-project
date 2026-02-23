@@ -21,21 +21,12 @@ const principles = [
 
 export default function HowZamanceDelivers() {
   return (
-    <section className="relative py-24 overflow-hidden">
-      
-      {/* 🔹 Background Layers */}
-      <div className="absolute inset-0">
-        {/* Base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#F8FAFC] via-white to-[#EEF2FF]" />
-
-        {/* Diagonal Accent */}
-        <div className="absolute -top-32 -right-32 h-[500px] w-[500px] rotate-12 bg-gradient-to-br from-[#1E3A8A]/15 to-transparent blur-[120px]" />
-        <div className="absolute bottom-0 -left-32 h-[400px] w-[400px] bg-gradient-to-tr from-[#1FA45B]/10 to-transparent blur-[120px]" />
-      </div>
+    <section className="relative  overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto px-6">
+        <div className="absolute left-40 top-0 w-[150px] h-[100px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div>
         {/* 🔹 Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-16 mt-24 text-center">
           <h2 className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 mb-6">
             How Zamance Delivers
           </h2>
@@ -46,10 +37,12 @@ export default function HowZamanceDelivers() {
           </p>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-2 items-center">
+        <div className="grid gap-12 lg:grid-cols-2 items-center relative">
+          <div className="absolute right-28 top-20 w-[240px] h-[240px] bg-green-300 rounded-full blur-[70px] opacity-100"></div>
 
           {/* 🔹 Visual */}
           <div className="relative">
+            
             {/* Glow */}
             <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-[#1E3A8A]/20 to-[#1FA45B]/20 blur-2xl opacity-70" />
 

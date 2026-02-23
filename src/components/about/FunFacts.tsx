@@ -83,6 +83,7 @@ export default function FunFacts() {
       ref={ref}
       className="relative overflow-hidden bg-gradient-to-b from-[#F8FAFC] to-white py-24"
     >
+      <div className="absolute right-28 top-20 w-[240px] h-[240px] bg-green-300 rounded-full blur-[70px] opacity-100"></div>
       {/* Background Blur */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,#1FA45B15,transparent_70%)]" />
 

@@ -24,7 +24,7 @@ export default function Home() {
        <Industries /> 
         <Partners />                 
       <Trust />                
-      <WhyZamance />           
+      <WhyZamance />            
       <Pillars />              
       <HowZamanceDelivers />   
       <Methodology />                

@@ -41,20 +41,16 @@ const cardVariants: Variants = {
 
 export default function WhyZamance() {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-white to-[#F8FAFC] overflow-hidden">
+    <section className="relative py-24  overflow-hidden">
       
       {/* 🔹 Background Effects */}
-      <div className="pointer-events-none absolute inset-0">
-        {/* Gradient Orbs */}
-        <div className="absolute -top-40 -left-40 h-[420px] w-[420px] rounded-full bg-[#1E3A8A]/20 blur-[120px]" />
-        <div className="absolute top-1/3 -right-40 h-[420px] w-[420px] rounded-full bg-[#1FA45B]/20 blur-[120px]" />
-        <div className="absolute bottom-0 left-1/4 h-[300px] w-[300px] rounded-full bg-teal-400/10 blur-[100px]" />
+      {/* Green Glow */}
+      <div className="absolute left-28 top-20 w-[240px] h-[240px] bg-green-300 rounded-full blur-[70px] opacity-100"></div>
 
-        {/* Subtle Grid Texture */}
-        <div className="absolute inset-0 opacity-[0.04]">
-          <div className="h-full w-full bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
-        </div>
-      </div>
+      {/* Blue Glow */}
+      <div className="absolute right-72 bottom-16 w-[200px] h-[200px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div>
+
+
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* 🔹 Header */}

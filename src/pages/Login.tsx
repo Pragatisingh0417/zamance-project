@@ -39,7 +39,7 @@ export default function Login() {
         </div>
 
         {/* RIGHT – Login Form */}
-        <div className="p-8 md:p-12 flex flex-col justify-center text-white">
+        <div className="p-8 md:p-12 flex flex-col justify-center bg-black text-white">
           <h3 className="text-2xl font-semibold">
             Welcome Back
           </h3>

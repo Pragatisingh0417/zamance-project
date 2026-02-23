@@ -3,7 +3,9 @@ import logo from "../assets/logo.jpeg";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F172A] text-white">
+    <footer className="relative bg-gradient-to-br from-blue-900 via-blue-900 to-teal-800 text-white">
+
+      
       <div className="max-w-7xl mx-auto px-6 py-16">
 
         {/* Top Grid */}

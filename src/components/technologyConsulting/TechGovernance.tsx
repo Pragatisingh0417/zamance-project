@@ -25,7 +25,6 @@ export function TechGovernance() {
       <div className="max-w-6xl mx-auto px-6">
 
         {/* HEADER */}
-
         <div className="text-center max-w-xl mx-auto mb-14">
 
           <h2 className="text-3xl sm:text-4xl font-bold">
@@ -55,11 +54,10 @@ export function TechGovernance() {
           <div className="space-y-10">
 
             {governance.map((item,i)=>(
-              
+
               <div key={i} className="flex gap-5">
 
                 {/* Hexagon */}
-
                 <div className="relative z-10">
 
                   <div className="
@@ -67,7 +65,7 @@ export function TechGovernance() {
                   bg-gradient-to-br
                   from-blue-500
                   to-green-500
-                  clip-hexagon
+                  [clip-path:polygon(25%_6%,75%_6%,100%_50%,75%_94%,25%_94%,0%_50%)]
                   flex
                   items-center
                   justify-center
@@ -80,7 +78,6 @@ export function TechGovernance() {
 
 
                 {/* Text */}
-
                 <div className="bg-white text-black p-4 rounded-xl shadow-lg">
 
                   <h3 className="font-semibold text-sm">
@@ -92,7 +89,6 @@ export function TechGovernance() {
                   </p>
 
                 </div>
-
 
               </div>
 
@@ -168,6 +164,7 @@ export function TechGovernance() {
 
               <div key={i}>
 
+                {/* Hexagon Icon */}
                 <div className={`absolute ${iconPos[i]}`}>
 
                   <div className="
@@ -175,7 +172,7 @@ export function TechGovernance() {
                   bg-gradient-to-br
                   from-blue-500
                   to-green-500
-                  clip-hexagon
+                  [clip-path:polygon(25%_6%,75%_6%,100%_50%,75%_94%,25%_94%,0%_50%)]
                   flex
                   items-center
                   justify-center
@@ -188,14 +185,14 @@ export function TechGovernance() {
                 </div>
 
 
-
+                {/* Title */}
                 <div className={`absolute ${labelPos[i]}
                 bg-white text-black px-5 py-3 rounded-xl shadow-lg text-sm font-semibold`}>
                   {item.title}
                 </div>
 
 
-
+                {/* Description */}
                 <div className={`absolute ${descPos[i]}
                 w-[250px] text-white/70 text-sm`}>
                   {item.desc}
@@ -211,23 +208,6 @@ export function TechGovernance() {
 
 
       </div>
-
-
-
-      <style jsx>{`
-
-        .clip-hexagon {
-          clip-path: polygon(
-            25% 6%,
-            75% 6%,
-            100% 50%,
-            75% 94%,
-            25% 94%,
-            0% 50%
-          );
-        }
-
-      `}</style>
 
     </section>
   );

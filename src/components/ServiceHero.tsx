@@ -5,9 +5,9 @@ type Props = {
 
 const ServiceHero = ({ title, subtitle }: Props) => {
   return (
-    <section className="bg-gradient-to-br from-[#1E3A8A] to-[#1FA45B] text-white h-30 md:h-40 lg:h-60">
-      <div className="mx-auto max-w-7xl px-6 py-24">
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight animate-fadeIn">
+    <section className="bg-gradient-to-br from-blue-900 via-blue-900 to-teal-800 text-white h-30 md:h-40 lg:h-60">
+      <div className="mx-auto max-w-7xl px-6 py-10 md:px-6 md:py-24">
+        <h1 className="text-2xl md:text-5xl text-center font-semibold tracking-tight animate-fadeIn">
           {title}
         </h1>
 

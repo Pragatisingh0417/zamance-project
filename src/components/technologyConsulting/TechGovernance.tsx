@@ -1,70 +1,234 @@
 export function TechGovernance() {
+
   const governance = [
     {
       title: "Architecture Governance",
-      desc: "Structured oversight ensuring every system aligns with long-term scalability,  and enterprise resilience.",
+      desc: "Structured oversight ensuring every system aligns with long-term scalability and enterprise resilience.",
     },
     {
       title: "Security & Compliance",
       desc: "Embedded regulatory controls and security frameworks aligned with data protection standards.",
     },
     {
-      title: "Risk Governance & Exposure",
-      desc: "Proactive identification of vendor, operational, and technical dependencies to prevent structural fragility.",
+      title: "Risk Governance",
+      desc: "Proactive identification of vendor and technical dependencies to reduce operational risk.",
     },
     {
       title: "Delivery Accountability",
-      desc: "Clear ownership models, milestone governance, and reporting transparency to ensure measurable execution.",
+      desc: "Clear ownership models and milestone governance ensuring measurable execution.",
     },
   ];
 
   return (
-    <section className="relative bg-[#0F172A] py-28 text-white">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="bg-gradient-to-br from-blue-900 via-blue-900 to-teal-800 py-20 text-white overflow-hidden">
 
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#1FA45B]">
-            Governance Framework
-          </p>
+      <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="mt-6 text-3xl sm:text-4xl font-bold leading-tight">
-            Governance Built into Technology Execution
+        {/* HEADER */}
+
+        <div className="text-center max-w-xl mx-auto mb-14">
+
+          <h2 className="text-3xl sm:text-4xl font-bold">
+            Governance Roadmap Elements
           </h2>
 
-          <p className="mt-6 text-white/70 text-lg leading-relaxed">
-            Our governance model ensures transparency, accountability, and structural
-            integrity across every stage of technology execution.
+          <p className="mt-4 text-white/70">
+            Key governance elements that support secure and structured
+            technology execution.
           </p>
+
         </div>
 
-        {/* 4 Modern Boxes */}
-        <div className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {governance.map((item, index) => (
-            <div
-              key={item.title}
-              className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 transition duration-300 hover:-translate-y-2 hover:border-[#1FA45B]/50 hover:bg-white/10"
-            >
-              {/* Top Accent Line */}
-              <div className="absolute left-0 top-0 h-1 w-full bg-[#1FA45B] rounded-t-2xl opacity-80"></div>
 
-              {/* Number */}
-              <span className="text-4xl font-bold text-[#1FA45B]/20">
-                {String(index + 1).padStart(2, "0")}
-              </span>
+        {/* ---------------- */}
+        {/* MOBILE VERSION */}
+        {/* ---------------- */}
 
-              <h3 className="mt-6 text-lg font-semibold">
-                {item.title}
-              </h3>
+        <div className="md:hidden relative">
 
-              <p className="mt-4 text-sm text-white/70 leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-          ))}
+          {/* Vertical Line */}
+          <div className="absolute left-6 top-0 bottom-0 w-[4px]
+          bg-gradient-to-b from-blue-500 via-teal-400 to-green-500
+          rounded-full"></div>
+
+
+          <div className="space-y-10">
+
+            {governance.map((item,i)=>(
+              
+              <div key={i} className="flex gap-5">
+
+                {/* Hexagon */}
+
+                <div className="relative z-10">
+
+                  <div className="
+                  w-12 h-12
+                  bg-gradient-to-br
+                  from-blue-500
+                  to-green-500
+                  clip-hexagon
+                  flex
+                  items-center
+                  justify-center
+                  font-bold
+                  ">
+                    {i+1}
+                  </div>
+
+                </div>
+
+
+                {/* Text */}
+
+                <div className="bg-white text-black p-4 rounded-xl shadow-lg">
+
+                  <h3 className="font-semibold text-sm">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-xs mt-1">
+                    {item.desc}
+                  </p>
+
+                </div>
+
+
+              </div>
+
+            ))}
+
+          </div>
+
         </div>
+
+
+
+        {/* ---------------- */}
+        {/* DESKTOP VERSION */}
+        {/* ---------------- */}
+
+        <div className="hidden md:block relative h-[520px] mt-10">
+
+          <svg
+            className="absolute left-0 top-0 h-full w-full"
+            viewBox="0 0 420 520"
+            fill="none"
+          >
+
+            <path
+              d="
+              M20 20
+              C 280 40, 280 140, 60 200
+              C 300 260, 300 360, 40 480
+              "
+              stroke="url(#grad)"
+              strokeWidth="8"
+              fill="transparent"
+              strokeLinecap="round"
+            />
+
+            <defs>
+              <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+
+                <stop offset="0%" stopColor="#3B82F6"/>
+                <stop offset="50%" stopColor="#14B8A6"/>
+                <stop offset="100%" stopColor="#22C55E"/>
+
+              </linearGradient>
+            </defs>
+
+          </svg>
+
+
+          {governance.map((item,i)=>{
+
+            const iconPos = [
+              "top-[40px] left-[60px]",
+              "top-[160px] left-[230px]",
+              "top-[280px] left-[80px]",
+              "top-[400px] left-[230px]",
+            ];
+
+            const labelPos = [
+              "top-[40px] left-[130px]",
+              "top-[160px] left-[20px]",
+              "top-[280px] left-[150px]",
+              "top-[400px] left-[20px]",
+            ];
+
+            const descPos = [
+              "top-[40px] right-[0px]",
+              "top-[160px] right-[0px]",
+              "top-[280px] right-[0px]",
+              "top-[400px] right-[0px]",
+            ];
+
+            return(
+
+              <div key={i}>
+
+                <div className={`absolute ${iconPos[i]}`}>
+
+                  <div className="
+                  w-14 h-14
+                  bg-gradient-to-br
+                  from-blue-500
+                  to-green-500
+                  clip-hexagon
+                  flex
+                  items-center
+                  justify-center
+                  font-bold
+                  shadow-xl
+                  ">
+                    {i+1}
+                  </div>
+
+                </div>
+
+
+
+                <div className={`absolute ${labelPos[i]}
+                bg-white text-black px-5 py-3 rounded-xl shadow-lg text-sm font-semibold`}>
+                  {item.title}
+                </div>
+
+
+
+                <div className={`absolute ${descPos[i]}
+                w-[250px] text-white/70 text-sm`}>
+                  {item.desc}
+                </div>
+
+              </div>
+
+            );
+
+          })}
+
+        </div>
+
 
       </div>
+
+
+
+      <style jsx>{`
+
+        .clip-hexagon {
+          clip-path: polygon(
+            25% 6%,
+            75% 6%,
+            100% 50%,
+            75% 94%,
+            25% 94%,
+            0% 50%
+          );
+        }
+
+      `}</style>
+
     </section>
   );
 }

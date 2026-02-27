@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 export function AICapabilities() {
   const capabilities = [
@@ -22,7 +23,7 @@ export function AICapabilities() {
     },
   ];
 
-  const container = {
+  const container: Variants = {
     hidden: {},
     show: {
       transition: {
@@ -31,19 +32,20 @@ export function AICapabilities() {
     },
   };
 
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, y: 40 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const,
+      },
     },
   };
 
   return (
     <section className="relative bg-white py-32 overflow-hidden">
-
-      {/* Subtle floating glow */}
       <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: [0.4, 0, 0.2, 1] }}
@@ -51,8 +53,6 @@ export function AICapabilities() {
       />
 
       <div className="mx-auto max-w-7xl px-6">
-
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +74,6 @@ export function AICapabilities() {
           </p>
         </motion.div>
 
-        {/* Matrix Grid */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -82,7 +81,7 @@ export function AICapabilities() {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 border-t border-l border-black/10"
         >
-          {capabilities.map((itemData, index) => (
+          {capabilities.map((itemData) => (
             <motion.div
               key={itemData.title}
               variants={item}
@@ -91,7 +90,6 @@ export function AICapabilities() {
                          group transition-all duration-500 
                          hover:bg-[#F8FAFC]"
             >
-              {/* Animated corner accent */}
               <motion.div
                 initial={{ width: 0 }}
                 whileHover={{ width: "60px" }}
@@ -99,7 +97,6 @@ export function AICapabilities() {
                 className="absolute top-0 left-0 h-[3px] bg-[#1FA45B]"
               />
 
-              {/* Subtle glow */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-[#1FA45B]/5 to-transparent" />
 
               <motion.h3
@@ -115,7 +112,6 @@ export function AICapabilities() {
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

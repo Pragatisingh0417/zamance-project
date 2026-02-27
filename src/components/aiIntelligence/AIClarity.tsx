@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export function AIClarity() {
   const pillars = [
     {
@@ -18,12 +22,40 @@ export function AIClarity() {
     },
   ];
 
-  return (
-    <section className="bg-[#F8FAFC] py-28">
-      <div className="mx-auto max-w-7xl px-6 text-center">
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
-        {/* Header */}
-        <div className="max-w-3xl mx-auto">
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  return (
+    <section className="relative bg-[#F8FAFC] py-28 overflow-hidden">
+
+      {/* Background blur accents */}
+      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-[#1FA45B]/20 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#1E3A8A]/10 blur-3xl"></div>
+
+      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-20 items-start">
+
+        {/* LEFT SIDE */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <p className="text-sm font-semibold uppercase tracking-widest text-[#1FA45B]">
             Intelligent Automation
           </p>
@@ -33,33 +65,70 @@ export function AIClarity() {
             <br /> Means at Zamance
           </h2>
 
-          <p className="mt-6 text-lg text-black/70 leading-relaxed">
+          <p className="mt-6 text-lg text-black/70 leading-relaxed max-w-xl">
             We approach AI and automation as strategic capability — not isolated
-            tools. Our focus is on embedding intelligence into operations while
+            tools. Our focus is embedding intelligence into operations while
             maintaining governance, transparency, and human oversight.
           </p>
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="mt-10 bg-[#1FA45B] text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:bg-[#188A4C]"
+          >
+            Explore Our Approach →
+          </motion.button>
+        </motion.div>
+
+        {/* RIGHT SIDE TIMELINE */}
+        <div className="relative">
+
+          {/* Animated Vertical Line */}
+          <motion.div
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="origin-top absolute left-6 top-0 bottom-0 w-[2px] bg-[#1E3A8A]/20"
+          />
+
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="space-y-12"
+          >
+            {pillars.map((itemData, index) => (
+              <motion.div
+                key={itemData.title}
+                variants={item}
+                whileHover={{ x: 8 }}
+                className="group relative pl-16 transition-all duration-300"
+              >
+                {/* Circle */}
+                <motion.div
+                  whileHover={{ scale: 1.15 }}
+                  className="absolute left-0 top-1 w-12 h-12 flex items-center justify-center 
+                             rounded-full bg-[#1FA45B] text-white font-bold shadow-md 
+                             transition-all duration-300 
+                             group-hover:shadow-xl group-hover:shadow-[#1FA45B]/30"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </motion.div>
+
+                {/* Content */}
+                <h3 className="text-lg font-semibold text-[#1E3A8A] transition-colors duration-300 group-hover:text-[#1FA45B]">
+                  {itemData.title}
+                </h3>
+
+                <p className="mt-2 text-black/70 text-sm leading-relaxed max-w-md transition-opacity duration-300 group-hover:opacity-90">
+                  {itemData.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-
-        {/* Pillars */}
-        <div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-4 text-left">
-          {pillars.map((item) => (
-            <div
-              key={item.title}
-              className="group rounded-2xl bg-white border border-black/10 p-8 transition duration-300 hover:shadow-xl hover:-translate-y-1"
-            >
-              <h3 className="text-lg font-semibold text-[#1E3A8A]">
-                {item.title}
-              </h3>
-
-              <p className="mt-4 text-sm text-black/70 leading-relaxed">
-                {item.desc}
-              </p>
-
-              <div className="mt-6 h-[2px] w-8 bg-[#1FA45B] transition-all duration-300 group-hover:w-16"></div>
-            </div>
-          ))}
-        </div>
-
       </div>
     </section>
   );

@@ -1,81 +1,77 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export function TechCapabilities() {
   const capabilities = [
     {
       title: "Strategic Direction",
-      desc: "Defining long-term technology positioning that aligns with commercial goals, operational realities, and capital planning.",
+      desc: "Defining long-term technology positioning aligned with commercial goals and capital planning.",
     },
     {
       title: "Architecture Design",
-      desc: "Designing systems that are scalable, resilient, and structured to support multi-year growth without accumulating hidden complexity.",
+      desc: "Designing scalable, resilient systems that support multi-year growth without hidden complexity.",
     },
     {
       title: "Investment Governance",
-      desc: "Establishing decision frameworks that ensure technology spending remains disciplined, transparent, and outcome-driven.",
+      desc: "Ensuring disciplined, transparent and outcome-driven technology investment decisions.",
     },
-    // {
-    //   title: "Transformation Oversight",
-    //   desc: "Providing structured execution control so modernization initiatives deliver measurable results — not prolonged disruption.",
-    // },
-    // {
-    //   title: "Platform & Vendor Strategy",
-    //   desc: "Independent evaluation of platforms and vendors to maintain leverage, flexibility, and long-term strategic control.",
-    // },
     {
       title: "Risk & Structural Integrity",
-      desc: "Strengthening compliance, security posture, and ownership clarity to reduce operational and reputational exposure.",
+      desc: "Strengthening compliance, security posture and ownership clarity to reduce exposure.",
     },
   ];
 
   return (
     <section className="bg-white py-32">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-20">
 
-        {/* Header */}
-        <div className="border-b border-black/10 pb-8 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#1FA45B]">
+        {/* LEFT STICKY PANEL */}
+        <div className="lg:sticky lg:top-32 h-fit">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#1FA45B] mb-4">
             Technology Advisory Scope
           </p>
 
-          <h2 className="mt-6 text-4xl font-bold text-[#1E3A8A] leading-tight">
-            Capabilities Structured <br /> Around Strategic Control
+          <h2 className="text-2xl font-extrabold text-gray-900 leading-tight">
+            Capabilities Structured Around Strategic Control
           </h2>
 
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-black/70 leading-relaxed">
-            Our advisory work is structured across the full lifecycle of
-            technology decision-making  from defining direction to governing
-            execution and protecting long-term structural integrity.
+          <p className="mt-6 text-sm text-black/60">
+            Enterprise-grade advisory designed to strengthen structural clarity,
+            investment discipline and long-term resilience.
           </p>
         </div>
 
-        {/* Capability Matrix */}
-        <div className="divide-y divide-black/10 mt-10">
-          {capabilities.map((c, index) => (
-            <div
-              key={c.title}
-              className="grid md:grid-cols-12 gap-8 py-10 items-start"
+        {/* RIGHT SCROLLING CONTENT */}
+        <div className="space-y-24">
+
+          {capabilities.map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.2, duration: 0.7 }}
+              viewport={{ once: true }}
+              whileHover={{ x: 10 }}
+              className="group border-l-2 border-black/10 pl-8 relative"
             >
-              {/* Index */}
-              <div className="md:col-span-2 text-sm font-semibold text-black/40">
-                {String(index + 1).padStart(2, "0")}
-              </div>
+              {/* Animated Dot */}
+              <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full 
+                              bg-gradient-to-br from-blue-600 to-green-500
+                              transition-all duration-500
+                              group-hover:scale-125" />
 
-              {/* Title */}
-              <div className="md:col-span-4">
-                <h3 className="text-xl font-semibold text-[#1E3A8A]">
-                  {c.title}
-                </h3>
-              </div>
+              <h3 className="text-2xl font-semibold text-[#1E3A8A] mb-4">
+                {item.title}
+              </h3>
 
-              {/* Description */}
-              <div className="md:col-span-6">
-                <p className="text-black/70 leading-relaxed">
-                  {c.desc}
-                </p>
-              </div>
-            </div>
+              <p className="text-lg text-black/70 leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
           ))}
-        </div>
 
+        </div>
       </div>
     </section>
   );

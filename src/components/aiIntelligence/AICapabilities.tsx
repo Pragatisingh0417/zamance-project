@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export function AICapabilities() {
   const capabilities = [
     {
@@ -18,13 +22,44 @@ export function AICapabilities() {
     },
   ];
 
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section className="bg-white py-32 relative">
-      <div className="absolute top-1/2 left-96 w-[240px] h-[240px] bg-green-300 rounded-full blur-[70px] opacity-100"></div>
+    <section className="relative bg-white py-32 overflow-hidden">
+
+      {/* Subtle floating glow */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/2 left-96 w-[240px] h-[240px] bg-green-300 rounded-full blur-[90px] opacity-40 pointer-events-none"
+      />
+
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Header */}
-        <div className="text-center mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-24"
+        >
           <p className="text-sm font-semibold uppercase tracking-widest text-[#1FA45B]">
             Capabilities
           </p>
@@ -33,33 +68,53 @@ export function AICapabilities() {
             Enterprise AI Built with Discipline
           </h2>
 
-          <p className="mt-8 text-lg text-black/70 leading-relaxed">
+          <p className="mt-8 text-lg text-black/70 leading-relaxed max-w-2xl mx-auto">
             We move organizations beyond experimentation — building AI systems
             that are governed, scalable, and strategically aligned.
           </p>
-        </div>
+        </motion.div>
 
         {/* Matrix Grid */}
-        <div className="grid md:grid-cols-2 border-t border-l border-black/10">
-
-          {capabilities.map((item, ) => (
-            <div
-              key={item.title}
-              className="p-14 border-b border-r border-black/10 group transition-colors duration-300 hover:bg-[#F8FAFC]"
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 border-t border-l border-black/10"
+        >
+          {capabilities.map((itemData, index) => (
+            <motion.div
+              key={itemData.title}
+              variants={item}
+              whileHover={{ y: -8 }}
+              className="relative p-14 border-b border-r border-black/10 
+                         group transition-all duration-500 
+                         hover:bg-[#F8FAFC]"
             >
-              
+              {/* Animated corner accent */}
+              <motion.div
+                initial={{ width: 0 }}
+                whileHover={{ width: "60px" }}
+                transition={{ duration: 0.4 }}
+                className="absolute top-0 left-0 h-[3px] bg-[#1FA45B]"
+              />
 
-              <h3 className="text-2xl font-semibold text-[#0F172A]">
-                {item.title}
-              </h3>
+              {/* Subtle glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-[#1FA45B]/5 to-transparent" />
 
-              <p className="mt-6 text-black/70 leading-relaxed max-w-md">
-                {item.desc}
+              <motion.h3
+                whileHover={{ x: 6 }}
+                className="text-2xl font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#1FA45B]"
+              >
+                {itemData.title}
+              </motion.h3>
+
+              <p className="mt-6 text-black/70 leading-relaxed max-w-md transition-opacity duration-300 group-hover:text-black/90">
+                {itemData.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
-
-        </div>
+        </motion.div>
 
       </div>
     </section>

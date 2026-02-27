@@ -4,6 +4,9 @@ import { AICapabilities } from "../components/aiIntelligence/AICapabilities";
 import { AIClarity } from "../components/aiIntelligence/AIClarity";
 import { AIGovernance } from "../components/aiIntelligence/AIGovernance";
 import { AIProblems } from "../components/aiIntelligence/AIProblems";
+import GetInTouch from "../components/home/GetInTouch";
+import NewsletterCTA from "../components/home/NewsletterCTA";
+
 
 
 
@@ -17,6 +20,8 @@ const AIAutomations = () => {
       <AIProblems />
        <AIGovernance />
       <AICapabilities />
+      <GetInTouch />
+      <NewsletterCTA />
      
 
       

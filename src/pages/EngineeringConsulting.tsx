@@ -1,10 +1,13 @@
 import ServiceHero from "../components/ServiceHero";
 
-import { EngineeringClarity } from "../components/engconsulting/EngineeringClarity";
+ 
 import { EngineeringProblems } from "../components/engconsulting/EngineeringProblems";
 import { EngineeringCapabilities } from "../components/engconsulting/EngineeringCapabilities";
-// import { EngineeringGovernance } from "../components/engconsulting/EngineeringGovernance";
+import { EngineeringGovernance } from "../components/engconsulting/EngineeringGovernance";
 import { EngineeringOutcomes } from "../components/engconsulting/EngineeringOutcomes";
+import GetInTouch from "../components/home/GetInTouch";
+import NewsletterCTA from "../components/home/NewsletterCTA";
+import EngineeringClarity from "../components/engconsulting/EngineeringClarity";
 
 const EngineeringConsulting = () => {
   return (
@@ -15,11 +18,14 @@ const EngineeringConsulting = () => {
       />
 
       <EngineeringClarity />
-      <EngineeringProblems />
-      {/* <EngineeringGovernance /> */}
       <EngineeringCapabilities />
+      <EngineeringProblems />
+      <EngineeringGovernance />
+      
       
       <EngineeringOutcomes />
+      <GetInTouch />
+      <NewsletterCTA />
 
       
     </>

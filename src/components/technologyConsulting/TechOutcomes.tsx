@@ -1,8 +1,12 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export function TechOutcomes() {
   const steps = [
     {
       title: "Assess & Diagnose",
-      desc: "We evaluate your technology landscape, governance model, and execution capability to identify structural risks and opportunity gaps.",
+      desc: "We evaluate your technology landscape, governance model, and execution capability to identify structural risks .",
     },
     {
       title: "Design & Align",
@@ -15,11 +19,17 @@ export function TechOutcomes() {
   ];
 
   return (
-    <section className="py-24 bg-[#F8FAFC]">
+    <section className="py-28 bg-[#F8FAFC] overflow-hidden">
       <div className="mx-auto max-w-6xl px-6">
 
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="max-w-3xl mx-auto text-center"
+        >
           <p className="text-sm font-semibold uppercase tracking-widest text-[#1FA45B]">
             Our Approach
           </p>
@@ -32,37 +42,66 @@ export function TechOutcomes() {
             We combine strategic clarity, architectural discipline, and governance oversight 
             to ensure technology initiatives remain aligned, resilient, and value-driven.
           </p>
-        </div>
+        </motion.div>
 
         {/* Timeline */}
-        <div className="relative mt-20">
+        <div className="relative mt-24">
 
-          {/* Horizontal Line */}
-          <div className="hidden md:block absolute top-8 left-0 right-0 h-[2px] bg-[#1E3A8A]/10"></div>
+          {/* Animated Horizontal Line */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="hidden md:block absolute top-8 left-0 right-0 h-[2px] 
+                       bg-gradient-to-r from-[#1E3A8A]/20 via-[#1E3A8A] to-[#1FA45B]
+                       origin-left"
+          />
 
-          <div className="grid gap-16 md:grid-cols-3 text-center md:text-left">
+          <div className="grid gap-16 md:grid-cols-3 text-center md:text-left relative">
+
             {steps.map((step, index) => (
-              <div key={step.title} className="relative">
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2, duration: 0.6 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                className="group relative"
+              >
 
                 {/* Step Circle */}
-                <div className="mx-auto md:mx-0 w-16 h-16 flex items-center justify-center 
-                                rounded-full bg-[#1E3A8A] text-white text-xl font-bold shadow-lg">
+                <motion.div
+                  whileHover={{ scale: 1.15 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="mx-auto md:mx-0 w-16 h-16 flex items-center justify-center 
+                             rounded-full bg-[#1E3A8A] text-white text-xl font-bold 
+                             shadow-lg transition-all duration-300
+                             group-hover:shadow-[0_0_25px_rgba(30,58,138,0.5)]"
+                >
                   {index + 1}
-                </div>
+                </motion.div>
 
-                {/* Content */}
-                <div className="mt-8">
-                  <h3 className="text-xl font-semibold text-[#1E3A8A]">
+                {/* Content Card */}
+                <div className="mt-10 p-6 rounded-xl transition-all duration-300
+                                group-hover:bg-white group-hover:shadow-xl">
+
+                  <h3 className="text-xl font-semibold text-[#1E3A8A] 
+                                 transition-colors duration-300
+                                 group-hover:text-[#1FA45B]">
                     {step.title}
                   </h3>
 
                   <p className="mt-4 text-black/70 leading-relaxed">
                     {step.desc}
                   </p>
+
                 </div>
 
-              </div>
+              </motion.div>
             ))}
+
           </div>
 
         </div>

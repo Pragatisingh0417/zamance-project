@@ -1,4 +1,3 @@
-import React from "react";
 
 const frameworkSteps = [
   {
@@ -42,7 +41,7 @@ export default function DataIntelligenceFramework() {
 
           {/* Cards */}
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 relative">
-            {frameworkSteps.map((item, index) => (
+            {frameworkSteps.map((item, ) => (
               <div
                 key={item.step}
                 className="group relative rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 p-8 transition-all duration-300 hover:-translate-y-3 hover:bg-white/10"

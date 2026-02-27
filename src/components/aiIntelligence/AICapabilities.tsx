@@ -46,7 +46,7 @@ export function AICapabilities() {
       {/* Subtle floating glow */}
       <motion.div
         animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 10, repeat: Infinity, ease: [0.4, 0, 0.2, 1] }}
         className="absolute top-1/2 left-96 w-[240px] h-[240px] bg-green-300 rounded-full blur-[90px] opacity-40 pointer-events-none"
       />
 

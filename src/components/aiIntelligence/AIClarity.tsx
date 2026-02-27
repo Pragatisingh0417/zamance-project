@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 export function AIClarity() {
   const pillars = [
@@ -22,7 +23,8 @@ export function AIClarity() {
     },
   ];
 
-  const container = {
+  // ✅ Properly typed container variant
+  const container: Variants = {
     hidden: {},
     show: {
       transition: {
@@ -31,24 +33,26 @@ export function AIClarity() {
     },
   };
 
-  const item = {
+  // ✅ Properly typed item variant (ease FIXED)
+  const item: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: {
+        duration: 0.6,
+        ease: [0.4, 0, 0.2, 1], // ✅ Type-safe easing
+      },
     },
   };
 
   return (
     <section className="relative bg-[#F8FAFC] py-28 overflow-hidden">
-
       {/* Background blur accents */}
       <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-[#1FA45B]/20 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#1E3A8A]/10 blur-3xl"></div>
 
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-20 items-start">
-
         {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -82,12 +86,11 @@ export function AIClarity() {
 
         {/* RIGHT SIDE TIMELINE */}
         <div className="relative">
-
-          {/* Animated Vertical Line */}
+          {/* Animated Vertical Line (ease FIXED) */}
           <motion.div
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }} // ✅ FIXED
             viewport={{ once: true }}
             className="origin-top absolute left-6 top-0 bottom-0 w-[2px] bg-[#1E3A8A]/20"
           />

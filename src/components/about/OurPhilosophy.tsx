@@ -65,7 +65,7 @@ export default function OurPhilosophy() {
             <div className="space-y-6 text-lg leading-relaxed text-gray-700">
               <p>
                 At Zamance, we believe consulting should create real business
-                impact — not just polished presentations.
+                impact not just polished presentations.
               </p>
 
               <p>

@@ -6,7 +6,7 @@ export default function EngineeringClarity() {
   const items = [
     {
       title: "Business-led architecture",
-      desc: "Systems designed around real workflows, constraints, and business priorities — not idealized diagrams.",
+      desc: "Systems designed around real workflows, constraints, and business priorities not idealized diagrams.",
     },
     {
       title: "Built to scale responsibly",

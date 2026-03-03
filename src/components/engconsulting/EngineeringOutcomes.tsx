@@ -41,20 +41,21 @@ export function EngineeringOutcomes() {
             </p>
 
             <h2 className="text-4xl sm:text-5xl font-bold text-[#0F172A] leading-tight">
-              Measurable Impact —
+              Measurable Impact 
               <br />
               Not Just Delivery.
             </h2>
 
             <p className="text-lg text-black/70 leading-relaxed max-w-xl">
               Our engagements are structured around operational improvement.
-              The goal is not feature completion — it is system-level advancement
+              The goal is not feature completion it is system-level advancement
               that compounds over time.
             </p>
           </motion.div>
 
           {/* RIGHT SIDE */}
-          <div className="grid sm:grid-cols-2 gap-x-12 gap-y-16">
+          <div className="grid relative sm:grid-cols-2 gap-x-12 gap-y-16">
+             <div className="absolute right-10 top-0 w-[200px] h-[200px] bg-green-500 rounded-full blur-[80px] opacity-100"></div>
 
             {outcomes.map((item, index) => (
               <motion.div

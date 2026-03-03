@@ -20,7 +20,7 @@ export default function Footer() {
             />
             <p className="text-white/80 text-sm leading-relaxed">
               Zamance is a global consulting and solutions firm specializing in
-              Data, Technology, AI Automations, and Engineering — delivering
+              Data, Technology, AI Automations, and Engineering delivering
               outcome-driven solutions with accountability.
             </p>
           </div>

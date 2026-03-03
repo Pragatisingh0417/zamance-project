@@ -2,7 +2,7 @@ export function TechClarity() {
   const points = [
     {
       title: "Business-led architecture",
-      desc: "Systems designed around real workflows, constraints, and business priorities — not idealized diagrams.",
+      desc: "Systems designed around real workflows, constraints, and business priorities not idealized diagrams.",
     },
     {
       title: "Built to scale responsibly",
@@ -61,7 +61,7 @@ export function TechClarity() {
           </div>
 
           {/* Right Side Numbered Timeline */}
-          <div className="relative border-l-2 border-[#1FA45B]/30 pl-8 space-y-12">
+          <div className="relative border-l-2 h-96 border-[#1FA45B]/30 pl-8 space-y-10">
             {points.map((item, index) => (
               <div key={item.title} className="relative">
                 

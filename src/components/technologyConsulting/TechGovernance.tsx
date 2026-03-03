@@ -5,104 +5,85 @@ import { motion } from "framer-motion";
 export function TechGovernance() {
   const governance = [
     {
+      step: "01",
       title: "Architecture Governance",
       desc: "Structured oversight ensuring systems align with long-term scalability and enterprise resilience.",
     },
     {
+      step: "02",
       title: "Security & Compliance",
       desc: "Embedded regulatory controls and security frameworks aligned with data protection standards.",
     },
     {
+      step: "03",
       title: "Risk Governance",
       desc: "Proactive identification of vendor and technical dependencies to reduce operational risk.",
     },
     {
+      step: "04",
       title: "Delivery Accountability",
       desc: "Clear ownership models and milestone governance ensuring measurable execution.",
     },
   ];
 
   return (
-    <section className="bg-gradient-to-br from-blue-900 via-blue-900 to-teal-800 py-24 text-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 ">
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-teal-900 py-28">
+      <div className="mx-auto max-w-7xl px-6">
 
-        {/* Header Animation */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className=" mb-20"
-        >
-          <p className="text-sm font-semibold uppercase text-center tracking-widest text-[#1FA45B]">
-            Governance Framework
+        {/* Header */}
+        <div className="text-center mb-20">
+          <p className="text-sm tracking-widest text-emerald-400 uppercase font-semibold">
+            Data & Intelligence Framework
           </p>
 
-          <h2 className=" text-center mt-6 text-4xl font-bold leading-tight">
-            Governance Roadmap Elements
+          <h2 className="mt-4 text-4xl font-bold text-white">
+            Transformation Roadmap
           </h2>
 
-          <p className="mt-6 text-center text-white/70 text-lg">
-            Core governance elements ensuring structured, secure, and accountable technology execution.
+          <p className="mt-4 text-slate-300 max-w-2xl mx-auto">
+            A structured operating model for turning fragmented data into
+            governed, insight-driven business capability.
           </p>
-        </motion.div>
+        </div>
 
-        {/* Timeline Wrapper */}
+        {/* Horizontal Connector Line */}
         <div className="relative">
+          <div className="absolute top-10 left-0 right-0 h-[2px] bg-gradient-to-r from-emerald-400 via-blue-400 to-teal-400 hidden lg:block"></div>
 
-          {/* Horizontal Gradient Line */}
-          <div className="hidden lg:block absolute top-7 left-0 w-full h-1 
-            bg-gradient-to-r from-blue-500 via-teal-400 to-green-500" />
-
-          <div className="grid lg:grid-cols-4 gap-12 relative">
-
-            {governance.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.15, duration: 0.6 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-                className="group relative"
+          {/* Cards */}
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 relative">
+            {governance.map((item, index) => (
+              <div
+                key={index}
+                className="group relative rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 p-8 transition-all duration-300 hover:-translate-y-3 hover:bg-white/10"
               >
-                {/* Node */}
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className="relative z-10 w-14 h-14 rounded-xl 
-                  bg-gradient-to-br from-blue-500 to-green-500
-                  flex items-center justify-center font-bold shadow-lg mb-6
-                  transition-all duration-300
-                  group-hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]"
-                >
-                  {i + 1}
-                </motion.div>
-
-                {/* Card */}
-                <div className="
-                  bg-white/5 border border-white/10 
-                  rounded-xl p-6 backdrop-blur-md
-                  transition-all duration-300
-                  group-hover:border-green-400/40
-                  group-hover:bg-white/10
-                  group-hover:shadow-[0_0_40px_rgba(34,197,94,0.15)]
-                ">
-
-                  <h3 className="font-semibold text-lg">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-white/70 text-sm mt-3 leading-relaxed">
-                    {item.desc}
-                  </p>
-
+                {/* Step Dot */}
+                <div className="hidden lg:flex absolute -top-5 left-1/2 -translate-x-1/2 h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-blue-500 text-white font-bold shadow-lg">
+                  {item.step}
                 </div>
 
-              </motion.div>
-            ))}
+                {/* Large Background Number */}
+                <span className="absolute top-6 right-6 text-6xl font-bold text-white/5 select-none">
+                  {item.step}
+                </span>
 
+                {/* Title */}
+                <h3 className="mt-6 text-lg font-semibold text-white group-hover:text-emerald-300 transition">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="mt-4 text-sm leading-relaxed text-slate-300">
+                  {item.desc}
+                </p>
+
+                {/* Bottom Accent */}
+                <div className="mt-6 h-[2px] w-12 bg-emerald-400 transition-all duration-300 group-hover:w-24"></div>
+              </div>
+            ))}
           </div>
         </div>
+
       </div>
     </section>
   );

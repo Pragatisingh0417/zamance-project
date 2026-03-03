@@ -10,7 +10,7 @@ export function EngineeringCapabilities() {
     },
     {
       title: "Platform & Application Engineering",
-      desc: "Full-lifecycle engineering of mission-critical platforms — from design and development to integration, modernization, and evolution.",
+      desc: "Full-lifecycle engineering of mission-critical platforms from design and development to integration, modernization, and evolution.",
     },
     {
       title: "Performance & Reliability Engineering",
@@ -24,8 +24,9 @@ export function EngineeringCapabilities() {
 
   return (
     <section className="bg-white py-32">
-      <div className="mx-auto max-w-7xl px-6">
-
+      <div className="mx-auto relative max-w-7xl px-6">
+        
+<div className="absolute right-12 top-0 w-[200px] h-[200px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -49,7 +50,8 @@ export function EngineeringCapabilities() {
         </motion.div>
 
         {/* Grid */}
-        <div className="mt-28 grid gap-y-20 gap-x-16 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-28 grid gap-y-20 gap-x-16 relative md:grid-cols-2 lg:grid-cols-4  ">
+          <div className="absolute left-10 top-0 w-[200px] h-[200px] bg-green-500 rounded-full blur-[80px] opacity-100"></div>
           {capabilities.map((item, index) => (
             <motion.div
               key={item.title}
@@ -58,7 +60,7 @@ export function EngineeringCapabilities() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
-              className="group relative"
+              className="group relative "
             >
               {/* Large subtle number */}
               <span className="text-5xl font-bold text-black/5">

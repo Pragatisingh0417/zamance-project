@@ -59,7 +59,7 @@ export default function DataIntelligenceConsulting() {
         {/* Closing */}
         <div className="mx-auto mt-14 max-w-3xl text-center">
           <p className="text-base text-black/70 sm:text-lg">
-            From strategy through execution, Zamance owns outcomes — not just reports.
+            From strategy through execution, Zamance owns outcomes not just reports.
           </p>
         </div>
 

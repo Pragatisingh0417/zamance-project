@@ -16,7 +16,7 @@ const blogPosts = [
     id: 2,
     title: "Digital Transformation: Beyond Technology Adoption",
     excerpt:
-      "True digital transformation requires alignment of people, process, and governance — not just tools.",
+      "True digital transformation requires alignment of people, process, and governance not just tools.",
     category: "Digital Consulting",
     date: "Jan 15, 2026",
     readTime: "5 min read",

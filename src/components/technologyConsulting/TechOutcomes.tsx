@@ -20,7 +20,8 @@ export function TechOutcomes() {
 
   return (
     <section className="py-28 bg-[#F8FAFC] overflow-hidden">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-6 relative">
+         {/* <div className="absolute left-10 top-0 w-[200px] h-[200px]  bg-green-500 rounded-full blur-[80px] opacity-100"></div> */}
 
         {/* Header */}
         <motion.div
@@ -59,6 +60,8 @@ export function TechOutcomes() {
           />
 
           <div className="grid gap-16 md:grid-cols-3 text-center md:text-left relative">
+             <div className="absolute left-10 top-0 w-[200px] h-[200px] bg-green-500 rounded-full blur-[80px] opacity-100"></div>
+              <div className="absolute right-10 top-0 w-[200px] h-[200px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div>
 
             {steps.map((step, index) => (
               <motion.div

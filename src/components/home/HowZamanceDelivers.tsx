@@ -32,7 +32,7 @@ export default function HowZamanceDelivers() {
           </h2>
           <p className="text-base md:text-lg text-black/70 max-w-4xl mx-auto">
             Zamance delivers results through a problem-first, execution-driven
-            consulting model—bridging strategy and execution with accountability
+            consulting modelbridging strategy and execution with accountability
             and governance.
           </p>
         </div>

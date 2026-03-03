@@ -10,7 +10,7 @@ export function EngineeringGovernance() {
     },
     {
       title: "Resilience By Design",
-      desc: "Failure scenarios, load patterns, and recovery workflows are engineered into systems — not patched in later.",
+      desc: "Failure scenarios, load patterns, and recovery workflows are engineered into systems not patched in later.",
     },
     {
       title: "Security As Architecture",
@@ -24,7 +24,8 @@ export function EngineeringGovernance() {
 
   return (
     <section className="bg-white py-28 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-6 relative">
+        <div className="absolute left-10 top-0 w-[200px] h-[200px] bg-green-500 rounded-full blur-[80px] opacity-100"></div>
 
         {/* HEADER */}
         <motion.div
@@ -38,7 +39,7 @@ export function EngineeringGovernance() {
             Engineering Quality
             <br />
             <span className="text-[#1eb65e]">
-              Is a System — Not a Promise.
+              Is a System Not a Promise.
             </span>
           </h2>
 

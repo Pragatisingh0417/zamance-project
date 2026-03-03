@@ -36,7 +36,11 @@ export function TechProblems() {
 
   return (
     <section className="relative bg-[#F8FAFC] py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-6 relative">
+         {/* <div className="absolute left-10 top-0 w-[200px] h-[200px] bg-green-500 rounded-full blur-[80px] opacity-100"></div> */}
+          <div className="absolute right-10 bottom-0 w-[200px] h-[200px] bg-green-500 rounded-full blur-[80px] opacity-100"></div>
+           <div className="absolute left-10 bottom-0 w-[200px] h-[200px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div>
+            <div className="absolute right-10 top-0 w-[200px] h-[200px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div>
 
         <div className="mx-auto max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-center text-[#1FA45B]">

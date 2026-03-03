@@ -22,7 +22,7 @@ export function TechThinkingSection() {
             </p>
 
             <p className="mt-4 text-base sm:text-lg text-gray-700 leading-relaxed">
-              At Zamance, we treat data as an operating capability — not a
+              At Zamance, we treat data as an operating capability not a
               reporting layer. We align analytics with business priorities,
               governance standards, and the realities of execution so insights
               actually influence outcomes.
@@ -35,9 +35,9 @@ export function TechThinkingSection() {
 
           {/* RIGHT SIDE – Timeline */}
           <div className="relative">
-            <div className="absolute left-5 top-2 bottom-2 w-[2px] bg-[#1FA45B]/30" />
+            <div className="absolute left-5 top-4 bottom-1 h-96 w-[2px] bg-[#1FA45B]/30" />
 
-            <div className="space-y-12">
+            <div className="space-y-10">
               {[
                 {
                   title: "Start with the Decision",
@@ -53,13 +53,13 @@ export function TechThinkingSection() {
                 },
                 {
                   title: "Govern for Scale",
-                  desc: "Security, compliance, and data stewardship are built in from the start — not added after growth exposes gaps.",
+                  desc: "Security, compliance, and data stewardship are built in from the start not added after growth exposes gaps.",
                 },
               ].map((item, index) => (
                 <div key={item.title} className="relative pl-16">
 
                   {/* Number Circle */}
-                  <div className="absolute left-0 top-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#1FA45B] text-white font-semibold shadow-md">
+                  <div className="absolute left-0  flex h-10 w-10 items-center justify-center rounded-full bg-[#1FA45B] text-white font-semibold shadow-md">
                     {String(index + 1).padStart(2, "0")}
                   </div>
 

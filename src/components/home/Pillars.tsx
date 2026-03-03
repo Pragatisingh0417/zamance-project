@@ -29,8 +29,8 @@ export default function Pillars() {
   return (
     <section className=" relative py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="absolute right-72 top-0 w-[100px] h-[100px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div>
-        <div className="absolute left-72 bottom-0 w-[100px] h-[100px] bg-blue-500 rounded-full blur-[80px] opacity-80 z-0"></div>
+        {/* <div className="absolute right-72 top-0 w-[100px] h-[100px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div> */}
+        {/* <div className="absolute left-72 bottom-0 w-[100px] h-[100px] bg-blue-500 rounded-full blur-[80px] opacity-80 z-0"></div> */}
 
         <h2 className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 mb-14 leading-snug text-center md:leading-tight">
           Our Consulting Pillars

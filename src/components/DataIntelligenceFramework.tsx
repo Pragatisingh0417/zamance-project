@@ -1,16 +1,23 @@
-
 const frameworkSteps = [
   {
-    step: "01", title: "Discover & Align", desc: "Understand business objectives, data landscape, and decision priorities.",
+    step: "01",
+    title: "Discover & Align",
+    desc: "Understand business objectives, data landscape, and decision priorities.",
   },
   {
-    step: "02", title: "Architect & Govern", desc: "Design scalable data architecture with built-in governance and compliance.",
+    step: "02",
+    title: "Architect & Govern",
+    desc: "Design scalable data architecture with built-in governance and compliance.",
   },
   {
-    step: "03", title: "Build & Integrate", desc: "Develop pipelines, models, and dashboards with enterprise-grade quality.",
+    step: "03",
+    title: "Build & Integrate",
+    desc: "Develop pipelines, models, and dashboards with enterprise-grade quality.",
   },
   {
-    step: "04", title: "Enable & Optimize", desc: "Operationalize insights, measure outcomes, and continuously optimize.",
+    step: "04",
+    title: "Enable & Optimize",
+    desc: "Operationalize insights, measure outcomes, and continuously optimize.",
   },
 ];
 
@@ -18,7 +25,6 @@ export default function DataIntelligenceFramework() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-teal-900 py-28">
       <div className="mx-auto max-w-7xl px-6">
-
         {/* Header */}
         <div className="text-center mb-20">
           <p className="text-sm tracking-widest text-emerald-400 uppercase font-semibold">
@@ -41,7 +47,7 @@ export default function DataIntelligenceFramework() {
 
           {/* Cards */}
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 relative">
-            {frameworkSteps.map((item, ) => (
+            {frameworkSteps.map((item) => (
               <div
                 key={item.step}
                 className="group relative rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 p-8 transition-all duration-300 hover:-translate-y-3 hover:bg-white/10"
@@ -72,7 +78,6 @@ export default function DataIntelligenceFramework() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

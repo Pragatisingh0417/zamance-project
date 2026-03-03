@@ -69,7 +69,7 @@ export function AICapabilities() {
           </h2>
 
           <p className="mt-8 text-lg text-black/70 leading-relaxed max-w-2xl mx-auto">
-            We move organizations beyond experimentation — building AI systems
+            We move organizations beyond experimentation building AI systems
             that are governed, scalable, and strategically aligned.
           </p>
         </motion.div>

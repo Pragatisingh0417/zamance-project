@@ -7,11 +7,11 @@ export function AIClarity() {
   const pillars = [
     {
       title: "AI-Powered Decisioning",
-      desc: "AI-driven insights embedded directly into operational workflows to support faster, more accurate executive and frontline decisions.",
+      desc: "AI-driven insights embedded directly into operational workflows to support faster, more accurate executive .",
     },
     {
       title: "Operational Automation",
-      desc: "Structured automation of repeatable processes using AI-enhanced systems that reduce friction and improve consistency.",
+      desc: "Structured automation of repeatable processes using AI-enhanced systems  improve consistency.",
     },
     {
       title: "Human-Centered Design",
@@ -70,7 +70,7 @@ export function AIClarity() {
           </h2>
 
           <p className="mt-6 text-lg text-black/70 leading-relaxed max-w-xl">
-            We approach AI and automation as strategic capability — not isolated
+            We approach AI and automation as strategic capability not isolated
             tools. Our focus is embedding intelligence into operations while
             maintaining governance, transparency, and human oversight.
           </p>
@@ -92,7 +92,7 @@ export function AIClarity() {
             whileInView={{ scaleY: 1 }}
             transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }} // ✅ FIXED
             viewport={{ once: true }}
-            className="origin-top absolute left-6 top-0 bottom-0 w-[2px] bg-[#1E3A8A]/20"
+            className="origin-top absolute left-6 top-0 bottom-0 w-[2px] h-92  bg-[#1E3A8A]/20"
           />
 
           <motion.div
@@ -100,7 +100,7 @@ export function AIClarity() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="space-y-12"
+            className="space-y-8"
           >
             {pillars.map((itemData, index) => (
               <motion.div
@@ -112,7 +112,7 @@ export function AIClarity() {
                 {/* Circle */}
                 <motion.div
                   whileHover={{ scale: 1.15 }}
-                  className="absolute left-0 top-1 w-12 h-12 flex items-center justify-center 
+                  className="absolute left-0  w-12 h-12 flex items-center justify-center 
                              rounded-full bg-[#1FA45B] text-white font-bold shadow-md 
                              transition-all duration-300 
                              group-hover:shadow-xl group-hover:shadow-[#1FA45B]/30"
@@ -125,7 +125,7 @@ export function AIClarity() {
                   {itemData.title}
                 </h3>
 
-                <p className="mt-2 text-black/70 text-sm leading-relaxed max-w-md transition-opacity duration-300 group-hover:opacity-90">
+                <p className=" text-black/70 text-sm leading-relaxed max-w-md transition-opacity duration-300 group-hover:opacity-90">
                   {itemData.desc}
                 </p>
               </motion.div>

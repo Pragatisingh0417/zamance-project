@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, steps } from "framer-motion";
+
 
 export function AIGovernance() {
   const governance = [

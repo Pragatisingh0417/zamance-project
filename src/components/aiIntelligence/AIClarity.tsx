@@ -78,7 +78,7 @@ export function AIClarity() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="mt-10 bg-[#1FA45B] text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:bg-[#188A4C]"
+            className="mt-10 bg-[#1E3A8A] text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:bg-[#188A4C]"
           >
             Explore Our Approach →
           </motion.button>
@@ -92,7 +92,7 @@ export function AIClarity() {
             whileInView={{ scaleY: 1 }}
             transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }} // ✅ FIXED
             viewport={{ once: true }}
-            className="origin-top absolute left-6 top-0 bottom-0 w-[2px] h-92  bg-[#1E3A8A]/20"
+            className="origin-top absolute left-6 top-0 bottom-0 w-[2px] h-90  bg-[#1E3A8A]/20"
           />
 
           <motion.div
@@ -117,7 +117,7 @@ export function AIClarity() {
                              transition-all duration-300 
                              group-hover:shadow-xl group-hover:shadow-[#1FA45B]/30"
                 >
-                  {String(index + 1).padStart(2, "0")}
+                  {String(index + 1).padStart(2, "")}
                 </motion.div>
 
                 {/* Content */}

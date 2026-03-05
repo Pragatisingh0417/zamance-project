@@ -5,22 +5,22 @@
 export function TechGovernance() {
   const governance = [
     {
-      step: "01",
+      step: "1",
       title: "Architecture Governance",
       desc: "Structured oversight ensuring systems align with long-term scalability and enterprise resilience.",
     },
     {
-      step: "02",
+      step: "2",
       title: "Security & Compliance",
       desc: "Embedded regulatory controls and security frameworks aligned with data protection standards.",
     },
     {
-      step: "03",
+      step: "3",
       title: "Risk Governance",
       desc: "Proactive identification of vendor and technical dependencies to reduce operational risk.",
     },
     {
-      step: "04",
+      step: "4",
       title: "Delivery Accountability",
       desc: "Clear ownership models and milestone governance ensuring measurable execution.",
     },
@@ -63,9 +63,9 @@ export function TechGovernance() {
                 </div>
 
                 {/* Large Background Number */}
-                <span className="absolute top-6 right-6 text-6xl font-bold text-white/5 select-none">
+                {/* <span className="absolute top-6 right-6 text-6xl font-bold text-white/5 select-none">
                   {item.step}
-                </span>
+                </span> */}
 
                 {/* Title */}
                 <h3 className="mt-6 text-lg font-semibold text-white group-hover:text-emerald-300 transition">

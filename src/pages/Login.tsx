@@ -39,7 +39,7 @@ export default function Login() {
         </div>
 
         {/* RIGHT – Login Form */}
-        <div className="p-8 md:p-12 flex flex-col justify-center bg-black text-white">
+        <div className="p-8 md:p-12 flex flex-col justify-center bg-white  text-[#1E3A8A]">
           <h3 className="text-2xl font-semibold">
             Welcome Back
           </h3>
@@ -53,7 +53,7 @@ export default function Login() {
               <input
                 type="email"
                 placeholder="you@company.com"
-                className="mt-1 w-full rounded-lg bg-slate-800/80 border border-slate-700 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="mt-1 w-full rounded-lg bg-slate-100/80 border border-slate-700 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
 
@@ -62,7 +62,7 @@ export default function Login() {
               <input
                 type="password"
                 placeholder="••••••••"
-                className="mt-1 w-full rounded-lg bg-slate-800/80 border border-slate-700 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="mt-1 w-full rounded-lg bg-slate-100/80 border border-slate-700 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
 

@@ -53,7 +53,7 @@ export function TechClarity() {
 
             {/* CTA Button */}
             <div className="mt-8">
-              <button className="inline-flex items-center gap-2 rounded-lg bg-[#1FA45B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#178a4c] hover:shadow-lg">
+              <button className="inline-flex items-center gap-2 rounded-lg bg-[#1E3A8A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#178a4c] hover:shadow-lg">
                 Schedule a Consultation
                 <span className="text-lg">→</span>
               </button>
@@ -67,7 +67,7 @@ export function TechClarity() {
                 
                 {/* Number Badge */}
                 <span className="absolute -left-[52px] flex h-10 w-10 items-center justify-center rounded-full bg-[#1FA45B] text-white font-bold text-sm shadow-md">
-                  {String(index + 1).padStart(2, "0")}
+                  {String(index + 1).padStart(2, "")}
                 </span>
 
                 <h3 className="text-lg font-semibold text-[#1E3A8A]">

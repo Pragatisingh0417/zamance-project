@@ -23,11 +23,13 @@ export default function Home() {
        <CaseStudies /> 
        <Industries /> 
         <Partners />                 
-      <Trust />                
+      <Trust />     
+                 
       <WhyZamance />            
-      <Pillars />              
+      <Pillars /> 
+       <Methodology />             
       <HowZamanceDelivers />   
-      <Methodology />                
+                     
       <Testimonials />         
                   <GetInTouch />
       <NewsletterCTA /> 

@@ -1,21 +1,23 @@
-const steps = [
+"use client";
+
+const principles = [
   {
-    step: "01",
+    step: "1",
     title: "Problem Definition",
     desc: "We start with business challenges, not tools.",
   },
   {
-    step: "02",
+    step: "2",
     title: "Solution Design",
     desc: "Practical, outcome-driven architecture and planning.",
   },
   {
-    step: "03",
+    step: "3",
     title: "Execution & Delivery",
     desc: "End-to-end delivery with ownership  at every stage.",
   },
   {
-    step: "04",
+    step: "4",
     title: "Governance & Scale",
     desc: "Global delivery with quality, compliance, and control.",
   },
@@ -23,56 +25,63 @@ const steps = [
 
 export default function Methodology() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 mb-20 text-center">
-          The Zamance Roadmap
-        </h2>
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-teal-900 py-28">
+      <div className="mx-auto max-w-7xl px-6">
 
-        {/* Timeline */}
+        {/* Header */}
+        <div className="text-center mb-20">
+          <p className="text-sm tracking-widest text-emerald-400 uppercase font-semibold">
+            Data & Intelligence Framework
+          </p>
+
+          <h2 className="mt-4 text-4xl font-bold text-white">
+            Transformation Roadmap
+          </h2>
+
+          <p className="mt-4 text-slate-300 max-w-2xl mx-auto">
+            A structured operating model for turning fragmented data into
+            governed, insight-driven business capability.
+          </p>
+        </div>
+
+        {/* Horizontal Connector Line */}
         <div className="relative">
-          {/* Horizontal line (desktop) */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-[2px] bg-[#1FA45B]/30" />
+          <div className="absolute top-10 left-0 right-0 h-[2px] bg-gradient-to-r from-emerald-400 via-blue-400 to-teal-400 hidden lg:block"></div>
 
-          {/* Vertical line (mobile) */}
-          <div className="md:hidden absolute left-4 top-0 bottom-0 w-[2px] bg-[#1FA45B]/30" />
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
-            {steps.map((s, index) => (
+          {/* Cards */}
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 relative">
+            {principles.map((item, index) => (
               <div
-                key={s.step}
-                className={`relative flex md:flex-col ${
-                  index % 2 === 0
-                    ? "md:items-start"
-                    : "md:items-end"
-                }`}
+                key={index}
+                className="group relative rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 p-8 transition-all duration-300 hover:-translate-y-3 hover:bg-white/10"
               >
-                {/* Dot */}
-                {/* <div className="absolute md:static left-0 md:left-auto top-2 md:top-auto">
-                  <div className="w-8 h-8 rounded-full bg-[#1FA45B] text-white flex items-center justify-center font-bold text-sm">
-                    {s.step}
-                  </div>
-                </div> */}
-
-                {/* Card */}
-                <div
-                  className={`ml-12 md:ml-0 mt-0 md:mt-6 max-w-xs bg-white border border-gray-200 rounded-xl shadow-sm p-6 ${
-                    index % 2 === 0
-                      ? "md:translate-y-8"
-                      : "md:-translate-y-8"
-                  }`}
-                >
-                  <h3 className="text-lg font-semibold mb-2">
-                    {s.title}
-                  </h3>
-                  <p className="text-sm text-black/70 leading-relaxed">
-                    {s.desc}
-                  </p>
+                {/* Step Dot */}
+                <div className="hidden lg:flex absolute -top-5 left-1/2 -translate-x-1/2 h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-blue-500 text-white font-bold shadow-lg">
+                  {String(index + 1).padStart(2, "")}
                 </div>
+
+                {/* Large Background Number */}
+                {/* <span className="absolute top-6 right-6 text-6xl font-bold text-white/5 select-none">
+                  {String(index + 1).padStart(2, "")}
+                </span> */}
+
+                {/* Title */}
+                <h3 className="mt-6 text-lg font-semibold text-white group-hover:text-emerald-300 transition">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="mt-4 text-sm leading-relaxed text-slate-300">
+                  {item.desc}
+                </p>
+
+                {/* Bottom Accent */}
+                <div className="mt-6 h-[2px] w-12 bg-emerald-400 transition-all duration-300 group-hover:w-24"></div>
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

@@ -23,10 +23,11 @@ export function EngineeringOutcomes() {
   ];
 
   return (
-    <section className="bg-white py-24 sm:py-28 lg:py-32 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className=" py-24 bg-slate-50 sm:py-28 lg:py-32 overflow-hidden">
+      <div className="mx-auto relative max-w-7xl px-6">
+        <div className="absolute left-10 bottom-0 w-[100px] h-[100px] bg-green-500 rounded-full blur-[80px] opacity-100"></div>
 
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="grid  lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
           {/* LEFT SIDE */}
           <motion.div
@@ -54,8 +55,8 @@ export function EngineeringOutcomes() {
           </motion.div>
 
           {/* RIGHT SIDE */}
-          <div className="grid relative sm:grid-cols-2 gap-x-12 gap-y-16">
-             <div className="absolute right-10 top-0 w-[200px] h-[200px] bg-green-500 rounded-full blur-[80px] opacity-100"></div>
+          <div className="grid relative  sm:grid-cols-2 gap-x-12 gap-y-16">
+             
 
             {outcomes.map((item, index) => (
               <motion.div

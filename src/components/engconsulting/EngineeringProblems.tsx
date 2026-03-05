@@ -5,22 +5,22 @@ import { motion } from "framer-motion";
 export function EngineeringProblems() {
   const problems = [
     {
-      step: "01",
+      step: "1",
       title: "Systems under production load",
       desc: "Architectures that appear stable in testing but collapse under real operational stress and scale.",
     },
     {
-      step: "02",
+      step: "2",
       title: "Performance bottlenecks",
       desc: "Hidden constraints that silently degrade mission-critical workflows and business velocity.",
     },
     {
-      step: "03",
+      step: "3",
       title: "Frequent downtime",
       desc: "Unstable releases and fragile deployments that erode trust and operational continuity.",
     },
     {
-      step: "04",
+      step: "4",
       title: "Uncontrolled technical complexity",
       desc: "Accumulated architectural debt that compounds risk and reduces long-term agility.",
     },
@@ -74,9 +74,9 @@ export function EngineeringProblems() {
                 </div>
 
                 {/* Large Background Number */}
-                <span className="absolute top-6 right-6 text-6xl font-bold text-white/5 select-none">
+                {/* <span className="absolute top-6 right-6 text-6xl font-bold text-white/5 select-none">
                   {item.step}
-                </span>
+                </span> */}
 
                 {/* Title */}
                 <h3 className="mt-6 text-lg font-semibold text-white group-hover:text-emerald-300 transition-colors duration-300">

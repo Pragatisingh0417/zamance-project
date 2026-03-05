@@ -51,7 +51,7 @@ export function AIProblems() {
               {/* Step Number */}
               <div className="flex items-start gap-6">
                 <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[#1FA45B]/10 text-[#1FA45B] font-bold text-lg">
-                  {String(index + 1).padStart(2, "0")}
+                  {String(index + 1).padStart(2, "")}
                 </div>
 
                 <div>

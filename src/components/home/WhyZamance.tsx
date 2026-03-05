@@ -48,7 +48,7 @@ export default function WhyZamance() {
       <div className="absolute left-28 top-20 w-[240px] h-[240px] bg-green-300 rounded-full blur-[70px] opacity-100"></div>
 
       {/* Blue Glow */}
-      <div className="absolute right-72 bottom-16 w-[200px] h-[200px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div>
+      <div className="absolute right-72 bottom-44 w-[100px] h-[200px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div>
 
 
 

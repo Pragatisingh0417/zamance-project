@@ -74,7 +74,7 @@ export default function EngineeringClarity() {
             >
               {/* Large Number */}
               <div className="text-5xl font-bold text-black/10 group-hover:text-[#2F9E44]/20 transition-colors duration-300">
-                {String(index + 1).padStart(2, "0")}
+                {String(index + 1).padStart(2, "")}
               </div>
 
               {/* Content */}

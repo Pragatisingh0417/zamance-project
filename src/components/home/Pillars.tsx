@@ -15,7 +15,7 @@ const pillars = [
     title: "AI Automations",
     desc: "Intelligent automation to optimize operations and scale outcomes.",
     accent: "border-[#1E3A8A]",
-    bg: "bg-[#1E3A8A]/5",
+    bg: "bg-white",
   },
   {
     title: "Engineering Consulting",
@@ -28,7 +28,7 @@ const pillars = [
 export default function Pillars() {
   return (
     <section className=" relative py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 bg-[#F8FAFC] p-5 rounded-2xl">
         {/* <div className="absolute right-72 top-0 w-[100px] h-[100px] bg-blue-500 rounded-full blur-[80px] opacity-100"></div> */}
         {/* <div className="absolute left-72 bottom-0 w-[100px] h-[100px] bg-blue-500 rounded-full blur-[80px] opacity-80 z-0"></div> */}
 

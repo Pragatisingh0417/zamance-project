@@ -60,7 +60,7 @@ export function TechThinkingSection() {
 
                   {/* Number Circle */}
                   <div className="absolute left-0  flex h-10 w-10 items-center justify-center rounded-full bg-[#1FA45B] text-white font-semibold shadow-md">
-                    {String(index + 1).padStart(2, "0")}
+                    {String(index + 1).padStart(2, "")}
                   </div>
 
                   {/* Content */}

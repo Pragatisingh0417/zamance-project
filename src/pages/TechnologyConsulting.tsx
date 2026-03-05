@@ -13,8 +13,9 @@ const TechnologyConsulting = () => {
     <>
       <ServiceHero
         title="Technology Consulting"
-        // subtitle="Aligning technology decisions with long-term business strategy and operational excellence."
+        subtitle="Aligning technology decisions with long-term business strategy and operational excellence."
       />
+      
       <TechClarity />
       <TechProblems />
         <TechGovernance />

@@ -5,22 +5,22 @@
 export function AIGovernance() {
   const governance = [
     {
-      step: "01",
+      step: "1",
       title: "Transparent AI Models",
       desc: "AI systems are built with interpretability to ensure stakeholders understand how decisions are made and outcomes occur."
     },
     {
-      step: "02",
+      step: "2",
       title: "Structured Human Oversight",
       desc: "Critical decisions remain supervised through defined review mechanisms that preserve accountability and operational control."
     },
     {
-      step: "03",
+      step: "3",
       title: "Data Privacy Controls",
       desc: "Robust governance frameworks protect sensitive information while aligning with enterprise security and regulatory standards."
     },
     {
-      step: "04",
+      step: "4",
       title: "Audit  Compliance",
       desc: "Every AI workflow remains traceable and compliant, enabling structured audits, documentation, and risk transparency."
     }
@@ -63,9 +63,9 @@ export function AIGovernance() {
                 </div>
 
                 {/* Large Background Number */}
-                <span className="absolute top-6 right-6 text-6xl font-bold text-white/5 select-none">
+                {/* <span className="absolute top-6 right-6 text-6xl font-bold text-white/5 select-none">
                   {item.step}
-                </span>
+                </span> */}
 
                 {/* Title */}
                 <h3 className="mt-6 text-lg font-semibold text-white group-hover:text-emerald-300 transition">

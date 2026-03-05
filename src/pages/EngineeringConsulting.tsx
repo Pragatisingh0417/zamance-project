@@ -14,7 +14,7 @@ const EngineeringConsulting = () => {
     <>
       <ServiceHero
         title="Engineering Consulting"
-        // subtitle="Designing and delivering robust, scalable, and future-ready engineering solutions."
+        subtitle="Designing and delivering robust, scalable, and future-ready engineering solutions."
       />
 
       <EngineeringClarity />

@@ -15,6 +15,7 @@ const AIAutomations = () => {
     <>
       <ServiceHero
         title="AI & Intelligent Automation"
+        subtitle="Aligning AI & Intelligent Automation decisions with long-term business strategy and operational excellence."
       />
       <AIClarity />
       <AIProblems />

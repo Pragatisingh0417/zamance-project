@@ -1,21 +1,21 @@
 const frameworkSteps = [
   {
-    step: "01",
+    step: "1",
     title: "Discover & Align",
     desc: "Understand business objectives, data landscape, and decision priorities.",
   },
   {
-    step: "02",
+    step: "2",
     title: "Architect & Govern",
     desc: "Design scalable data architecture with built-in governance and compliance.",
   },
   {
-    step: "03",
+    step: "3",
     title: "Build & Integrate",
     desc: "Develop pipelines, models, and dashboards with enterprise-grade quality.",
   },
   {
-    step: "04",
+    step: "4",
     title: "Enable & Optimize",
     desc: "Operationalize insights, measure outcomes, and continuously optimize.",
   },
@@ -58,9 +58,9 @@ export default function DataIntelligenceFramework() {
                 </div>
 
                 {/* Large Background Number */}
-                <span className="absolute top-6 right-6 text-6xl font-bold text-white/5 select-none">
+                {/* <span className="absolute top-6 right-6 text-6xl font-bold text-white/5 select-none">
                   {item.step}
-                </span>
+                </span> */}
 
                 {/* Title */}
                 <h3 className="mt-6 text-lg font-semibold text-white group-hover:text-emerald-300 transition">

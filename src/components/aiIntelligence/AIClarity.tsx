@@ -92,7 +92,7 @@ export function AIClarity() {
             whileInView={{ scaleY: 1 }}
             transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }} // ✅ FIXED
             viewport={{ once: true }}
-            className="origin-top absolute left-6 top-0 bottom-0 w-[2px] h-90  bg-[#1E3A8A]/20"
+            className="origin-top absolute left-6 top-0 bottom-0 w-[2px] md:h-80 h-[430px]  bg-[#1E3A8A]/20"
           />
 
           <motion.div

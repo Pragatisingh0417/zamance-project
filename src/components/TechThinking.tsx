@@ -35,7 +35,7 @@ export function TechThinkingSection() {
 
           {/* RIGHT SIDE – Timeline */}
           <div className="relative">
-            <div className="absolute left-5 top-4 bottom-1 h-96 w-[2px] bg-[#1FA45B]/30" />
+            <div className="absolute left-5 top-4 bottom-1 md:h-80 h-[440px] w-[2px] bg-[#1FA45B]/30" />
 
             <div className="space-y-10">
               {[

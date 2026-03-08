@@ -61,7 +61,7 @@ export function TechClarity() {
           </div>
 
           {/* Right Side Numbered Timeline */}
-          <div className="relative border-l-2 h-96 border-[#1FA45B]/30 pl-8 space-y-10">
+          <div className="relative border-l-2 md:h-80 h-[440px] border-[#1FA45B]/30 pl-8 space-y-10">
             {points.map((item, index) => (
               <div key={item.title} className="relative">
                 

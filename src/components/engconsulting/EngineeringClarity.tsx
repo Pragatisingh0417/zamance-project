@@ -22,83 +22,111 @@ export default function EngineeringClarity() {
     },
   ];
 
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, x: 30 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
   return (
-    <section className=" py-28">
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-24">
+    <section className="relative bg-[#F8FAFC] py-28 overflow-hidden">
+      {/* Background blur accents */}
+      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-[#1FA45B]/20 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#1E3A8A]/10 blur-3xl"></div>
+
+      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-20 items-start">
+        
         {/* LEFT SIDE */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="space-y-6"
         >
-          <p className="text-sm font-semibold tracking-widest uppercase text-[#2F9E44]">
-            Technology Consulting
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#1FA45B]">
+            Intelligent Automation
           </p>
 
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#1C2B4A] leading-tight">
-            How Zamance Thinks
-            <br />
-            About Technology
+          <h2 className="mt-6 text-3xl sm:text-4xl font-bold text-[#1E3A8A] leading-tight">
+            What Intelligent Automation
+            <br /> Means at Zamance
           </h2>
 
-          <p className="text-lg text-black/70 leading-relaxed">
-            At Zamance, technology consulting is not about recommending
-            platforms or chasing trends. It’s about helping leadership teams
-            make technology decisions they can stand behind today and three
-            years from now.
+          <p className="mt-6 text-lg text-black/70 leading-relaxed max-w-xl">
+            We approach AI and automation as strategic capability not isolated
+            tools. Our focus is embedding intelligence into operations while
+            maintaining governance, transparency, and human oversight.
           </p>
 
-          <button
-            className="mt-6 bg-[#2F9E44] hover:bg-[#248A39] 
-                             transition-all duration-300 
-                             px-6 py-3 rounded-lg text-white font-medium
-                             shadow-md hover:shadow-xl hover:-translate-y-1"
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="mt-10 bg-[#1E3A8A] text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:bg-[#188A4C]"
           >
-            Schedule a Consultation →
-          </button>
+            Explore Our Approach →
+          </motion.button>
         </motion.div>
 
-        {/* RIGHT SIDE - NEW DESIGN */}
-        <div className="divide-y divide-black/10">
-          {items.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              viewport={{ once: true }}
-              whileHover={{ x: 10 }}
-              className="group py-10 flex gap-8 transition-all duration-300"
-            >
-              {/* Large Number */}
-              <div className="text-5xl font-bold text-black/10 group-hover:text-[#2F9E44]/20 transition-colors duration-300">
-                {String(index + 1).padStart(2, "")}
-              </div>
+        {/* RIGHT SIDE TIMELINE */}
+        <div className="relative">
+          
+          {/* Vertical Line */}
+          <motion.div
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
+            viewport={{ once: true }}
+            className="origin-top absolute left-6  md:h-80 h-[440px] top-0 bottom-0 w-[2px] bg-[#1E3A8A]/20"
+          />
 
-              {/* Content */}
-              <div>
-                <h3
-                  className="text-xl font-semibold text-[#1C2B4A] 
-                               group-hover:text-[#2F9E44] 
-                               transition-colors duration-300"
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            {items.map((itemData, index) => (
+              <motion.div
+                key={itemData.title}
+                variants={item}
+                whileHover={{ x: 8 }}
+                className="group relative pl-16 transition-all duration-300"
+              >
+                {/* Circle */}
+                <motion.div
+                  whileHover={{ scale: 1.15 }}
+                  className="absolute left-0 w-12 h-12 flex items-center justify-center 
+                             rounded-full bg-[#1FA45B] text-white font-bold shadow-md 
+                             transition-all duration-300 
+                             group-hover:shadow-xl group-hover:shadow-[#1FA45B]/30"
                 >
-                  {item.title}
+                  {String(index + 1).padStart(2, "0")}
+                </motion.div>
+
+                {/* Content */}
+                <h3 className="text-lg font-semibold text-[#1E3A8A] transition-colors duration-300 group-hover:text-[#1FA45B]">
+                  {itemData.title}
                 </h3>
 
-                <p className="mt-3 text-black/70 leading-relaxed max-w-lg">
-                  {item.desc}
+                <p className="text-black/70 text-sm leading-relaxed max-w-md transition-opacity duration-300 group-hover:opacity-90">
+                  {itemData.desc}
                 </p>
-
-                {/* subtle underline animation */}
-                <div
-                  className="mt-4 h-[2px] w-0 bg-[#2F9E44] 
-                                group-hover:w-16 transition-all duration-500"
-                />
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
